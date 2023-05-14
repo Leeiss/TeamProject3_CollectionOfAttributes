@@ -19,14 +19,16 @@ namespace TeamPriject3_СollectionOfAttributes
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Registration userRegist = new Registration();
+            userRegist.Show();
         }
 
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Registration userLogin = new Registration();
+            Entry userLogin = new Entry();
             userLogin.Show();
         }
 
