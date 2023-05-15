@@ -264,7 +264,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(551, 146);
+            this.pictureBox3.Location = new System.Drawing.Point(555, 146);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(685, 675);
             this.pictureBox3.TabIndex = 30;
@@ -273,7 +273,7 @@
             // label_go_back
             // 
             this.label_go_back.Image = ((System.Drawing.Image)(resources.GetObject("label_go_back.Image")));
-            this.label_go_back.Location = new System.Drawing.Point(564, 449);
+            this.label_go_back.Location = new System.Drawing.Point(564, 461);
             this.label_go_back.Name = "label_go_back";
             this.label_go_back.Size = new System.Drawing.Size(38, 33);
             this.label_go_back.TabIndex = 31;
@@ -290,17 +290,18 @@
             // label_go_forward
             // 
             this.label_go_forward.Image = ((System.Drawing.Image)(resources.GetObject("label_go_forward.Image")));
-            this.label_go_forward.Location = new System.Drawing.Point(1185, 449);
+            this.label_go_forward.Location = new System.Drawing.Point(1185, 461);
             this.label_go_forward.Name = "label_go_forward";
             this.label_go_forward.Size = new System.Drawing.Size(35, 33);
             this.label_go_forward.TabIndex = 33;
+            this.label_go_forward.Click += new System.EventHandler(this.label_go_forward_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1248, 830);
+            this.ClientSize = new System.Drawing.Size(1248, 835);
             this.Controls.Add(this.label_go_forward);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label_go_back);

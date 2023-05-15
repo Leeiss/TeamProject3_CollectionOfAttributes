@@ -46,7 +46,8 @@ namespace TeamPriject3_СollectionOfAttributes
             if (table.Rows.Count > 0)
             {
 
-                MessageBox.Show("ХАрош");
+                MainForm mainForm = new MainForm(loginUser);
+                mainForm.ShowDialog();
 
 
 
@@ -56,6 +57,11 @@ namespace TeamPriject3_СollectionOfAttributes
             {
                 MessageBox.Show("Пользователь с такими данными не найден!");
             }
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
 
         }
     }

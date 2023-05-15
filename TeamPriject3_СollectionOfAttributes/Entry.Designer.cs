@@ -83,9 +83,10 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(122)))), ((int)(((byte)(121)))));
             this.label2.Location = new System.Drawing.Point(28, 136);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 24);
+            this.label2.Size = new System.Drawing.Size(59, 24);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Email";
+            this.label2.Text = "Логин";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -103,7 +104,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(235)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(535, 491);
+            this.ClientSize = new System.Drawing.Size(535, 689);
             this.Controls.Add(this.buttonEnter);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.entered_password);

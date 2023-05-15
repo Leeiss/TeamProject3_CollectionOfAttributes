@@ -21,5 +21,24 @@ namespace TeamPriject3_СollectionOfAttributes
         {
 
         }
+
+        private void Entry_Click(object sender, EventArgs e)
+        {
+            String codeUser = Code.Text;
+            if (codeUser == "1234")
+            {
+                MainForm mainForm = new MainForm(codeUser);
+                mainForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Плох");
+            }
+        }
+
+        private void Code_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

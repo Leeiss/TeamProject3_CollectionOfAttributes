@@ -19,7 +19,6 @@ namespace TeamPriject3_СollectionOfAttributes
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Registration userRegist = new Registration();
             userRegist.Show();
         }
@@ -27,7 +26,6 @@ namespace TeamPriject3_СollectionOfAttributes
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Entry userLogin = new Entry();
             userLogin.Show();
         }
