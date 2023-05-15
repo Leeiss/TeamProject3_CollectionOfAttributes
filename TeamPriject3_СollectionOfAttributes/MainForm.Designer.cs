@@ -82,9 +82,9 @@
             // pictureBox_logo
             // 
             this.pictureBox_logo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_logo.Image")));
-            this.pictureBox_logo.Location = new System.Drawing.Point(16, 12);
+            this.pictureBox_logo.Location = new System.Drawing.Point(12, 12);
             this.pictureBox_logo.Name = "pictureBox_logo";
-            this.pictureBox_logo.Size = new System.Drawing.Size(179, 123);
+            this.pictureBox_logo.Size = new System.Drawing.Size(195, 136);
             this.pictureBox_logo.TabIndex = 9;
             this.pictureBox_logo.TabStop = false;
             this.pictureBox_logo.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -128,28 +128,37 @@
             // 
             // label_showprofile
             // 
-            this.label_showprofile.Image = ((System.Drawing.Image)(resources.GetObject("label_showprofile.Image")));
-            this.label_showprofile.Location = new System.Drawing.Point(147, 245);
+            this.label_showprofile.AutoSize = true;
+            this.label_showprofile.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_showprofile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(98)))));
+            this.label_showprofile.Location = new System.Drawing.Point(147, 254);
             this.label_showprofile.Name = "label_showprofile";
-            this.label_showprofile.Size = new System.Drawing.Size(287, 55);
+            this.label_showprofile.Size = new System.Drawing.Size(184, 23);
             this.label_showprofile.TabIndex = 15;
+            this.label_showprofile.Text = "Смотреть профиль";
+            this.label_showprofile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_showprofile.Click += new System.EventHandler(this.label_showprofile_Click);
             // 
             // label_albums
             // 
-            this.label_albums.Image = ((System.Drawing.Image)(resources.GetObject("label_albums.Image")));
-            this.label_albums.Location = new System.Drawing.Point(-2, 307);
+            this.label_albums.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_albums.Location = new System.Drawing.Point(6, 316);
             this.label_albums.Name = "label_albums";
             this.label_albums.Size = new System.Drawing.Size(248, 38);
             this.label_albums.TabIndex = 16;
+            this.label_albums.Text = "Альбомы идей";
+            this.label_albums.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_addalbums
             // 
-            this.label_addalbums.Image = ((System.Drawing.Image)(resources.GetObject("label_addalbums.Image")));
-            this.label_addalbums.Location = new System.Drawing.Point(83, 368);
+            this.label_addalbums.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_addalbums.Location = new System.Drawing.Point(82, 372);
             this.label_addalbums.Name = "label_addalbums";
             this.label_addalbums.Size = new System.Drawing.Size(304, 60);
             this.label_addalbums.TabIndex = 18;
+            this.label_addalbums.Text = "Создать новый";
+            this.label_addalbums.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_addalbums.Click += new System.EventHandler(this.label_addalbums_Click);
             // 
             // label_box1
             // 
@@ -186,8 +195,8 @@
             // 
             // label_name1
             // 
-            this.label_name1.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_name1.Location = new System.Drawing.Point(112, 448);
+            this.label_name1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_name1.Location = new System.Drawing.Point(112, 453);
             this.label_name1.Name = "label_name1";
             this.label_name1.Size = new System.Drawing.Size(275, 33);
             this.label_name1.TabIndex = 24;
@@ -196,7 +205,7 @@
             // label_name2
             // 
             this.label_name2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_name2.Location = new System.Drawing.Point(112, 512);
+            this.label_name2.Location = new System.Drawing.Point(111, 531);
             this.label_name2.Name = "label_name2";
             this.label_name2.Size = new System.Drawing.Size(275, 33);
             this.label_name2.TabIndex = 25;
@@ -205,7 +214,7 @@
             // label_name3
             // 
             this.label_name3.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_name3.Location = new System.Drawing.Point(112, 587);
+            this.label_name3.Location = new System.Drawing.Point(112, 606);
             this.label_name3.Name = "label_name3";
             this.label_name3.Size = new System.Drawing.Size(275, 33);
             this.label_name3.TabIndex = 26;
@@ -220,11 +229,14 @@
             // 
             // label_show_allAlbums
             // 
-            this.label_show_allAlbums.Image = ((System.Drawing.Image)(resources.GetObject("label_show_allAlbums.Image")));
-            this.label_show_allAlbums.Location = new System.Drawing.Point(130, 749);
+            this.label_show_allAlbums.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_show_allAlbums.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(98)))));
+            this.label_show_allAlbums.Location = new System.Drawing.Point(93, 731);
             this.label_show_allAlbums.Name = "label_show_allAlbums";
             this.label_show_allAlbums.Size = new System.Drawing.Size(238, 42);
             this.label_show_allAlbums.TabIndex = 29;
+            this.label_show_allAlbums.Text = "Смотреть все";
+            this.label_show_allAlbums.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox3
             // 
@@ -264,9 +276,9 @@
             // label3
             // 
             this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
-            this.label3.Location = new System.Drawing.Point(12, 354);
+            this.label3.Location = new System.Drawing.Point(31, 372);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 86);
+            this.label3.Size = new System.Drawing.Size(64, 70);
             this.label3.TabIndex = 34;
             // 
             // label4
@@ -282,9 +294,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1248, 800);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(1282, 833);
+            this.Controls.Add(this.picturebox_profile);
+            this.Controls.Add(this.label_login);
+            this.Controls.Add(this.label_showprofile);
+            this.Controls.Add(this.label_albums);
+            this.Controls.Add(this.label_name1);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label_addalbums);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label_go_forward);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label_go_back);
@@ -293,18 +311,12 @@
             this.Controls.Add(this.label_name4);
             this.Controls.Add(this.label_name3);
             this.Controls.Add(this.label_name2);
-            this.Controls.Add(this.label_name1);
             this.Controls.Add(this.label_box4);
             this.Controls.Add(this.label_box3);
             this.Controls.Add(this.label_box2);
             this.Controls.Add(this.label_box1);
-            this.Controls.Add(this.label_addalbums);
-            this.Controls.Add(this.label_albums);
-            this.Controls.Add(this.label_showprofile);
             this.Controls.Add(this.lable_showprofile);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label_login);
-            this.Controls.Add(this.picturebox_profile);
             this.Controls.Add(this.pictureBox_logo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);

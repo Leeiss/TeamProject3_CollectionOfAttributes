@@ -67,5 +67,10 @@ namespace TeamPriject3_СollectionOfAttributes
         {
 
         }
+
+        private void label_addalbums_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
