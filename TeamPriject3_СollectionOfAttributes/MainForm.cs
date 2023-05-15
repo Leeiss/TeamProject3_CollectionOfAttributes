@@ -64,29 +64,14 @@ namespace TeamPriject3_СollectionOfAttributes
             DbDataReader reader = command.ExecuteReader();
             string statement = "";
 
-            if (reader.Read())
-            {
-                statement = reader.GetString(0);
-            }
 
             List<string> list = new List<string>();
 
 
             while (reader.Read())
             {
-                list.Add(reader[0].ToString());
+                list.Add(reader[1].ToString());
             }
-
-
-
-            MessageBox.Show(list[0]);
-            MessageBox.Show(list[1]);
-            MessageBox.Show(list[2]);
-
-
-
-
-
 
             switch (dataTable.Rows.Count)
             {
@@ -97,34 +82,28 @@ namespace TeamPriject3_СollectionOfAttributes
                     label_name4.Text = "";
                     break;
                 case 1:
-                    label_name1.Text = "1";
+                    label_name1.Text = list[0];
                     label_name2.Text = "";
                     label_name3.Text = "";
                     label_name4.Text = "";
                     break;
                 case 2:
-                    label_name1.Text = "2";
-                    label_name2.Text = "";
+                    label_name1.Text = list[0];
+                    label_name2.Text = list[1];
                     label_name3.Text = "";
                     label_name4.Text = "";
                     break;
                 case 3:
-                    label_name1.Text = "3";
-                    label_name2.Text = "";
-                    label_name3.Text = "";
-                    label_name4.Text = "";
-                    break;
-                case 4:
-                    label_name1.Text = "4";
-                    label_name2.Text = "";
-                    label_name3.Text = "";
+                    label_name1.Text = list[0];
+                    label_name2.Text = list[1];
+                    label_name3.Text = list[2];
                     label_name4.Text = "";
                     break;
                 default:
-                    label_name1.Text = "40";
-                    label_name2.Text = "";
-                    label_name3.Text = "";
-                    label_name4.Text = "";
+                    label_name1.Text = list[0];
+                    label_name2.Text = list[1];
+                    label_name3.Text = list[2];
+                    label_name4.Text = list[3];
                     break;
             }
 
