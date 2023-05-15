@@ -107,7 +107,7 @@
             this.label_login.Name = "label_login";
             this.label_login.Size = new System.Drawing.Size(155, 34);
             this.label_login.TabIndex = 12;
-            this.label_login.Text = "кирилл";
+            this.label_login.Text = "name";
             // 
             // label2
             // 
@@ -276,7 +276,7 @@
             // label3
             // 
             this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
-            this.label3.Location = new System.Drawing.Point(31, 372);
+            this.label3.Location = new System.Drawing.Point(22, 372);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 70);
             this.label3.TabIndex = 34;
@@ -323,6 +323,7 @@
             this.Controls.Add(this.label1);
             this.Name = "MainForm";
             this.Text = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_profile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
