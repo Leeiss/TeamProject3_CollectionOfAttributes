@@ -280,6 +280,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 70);
             this.label3.TabIndex = 34;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 

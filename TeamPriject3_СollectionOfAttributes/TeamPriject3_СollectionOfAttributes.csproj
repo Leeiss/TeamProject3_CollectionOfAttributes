@@ -56,6 +56,12 @@
     <Compile Include="AllAlbums.Designer.cs">
       <DependentUpon>AllAlbums.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateNewAlbum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateNewAlbum.Designer.cs">
+      <DependentUpon>CreateNewAlbum.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataBase.cs" />
     <Compile Include="Entry.cs">
       <SubType>Form</SubType>
@@ -91,6 +97,9 @@
     </Compile>
     <EmbeddedResource Include="AllAlbums.resx">
       <DependentUpon>AllAlbums.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateNewAlbum.resx">
+      <DependentUpon>CreateNewAlbum.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Entry.resx">
       <DependentUpon>Entry.cs</DependentUpon>

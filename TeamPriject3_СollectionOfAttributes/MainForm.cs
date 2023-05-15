@@ -72,5 +72,11 @@ namespace TeamPriject3_СollectionOfAttributes
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            CreateNewAlbum createNewAlbum = new CreateNewAlbum();
+            createNewAlbum.ShowDialog();
+        }
     }
 }
