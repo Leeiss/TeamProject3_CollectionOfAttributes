@@ -52,5 +52,20 @@ namespace TeamPriject3_СollectionOfAttributes
         {
 
         }
+
+        private void label_showprofile_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_box3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picturebox_profile_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
