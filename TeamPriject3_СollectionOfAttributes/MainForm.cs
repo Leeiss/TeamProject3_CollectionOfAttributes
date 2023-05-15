@@ -73,6 +73,8 @@ namespace TeamPriject3_СollectionOfAttributes
                 list.Add(reader[1].ToString());
             }
 
+            int a = dataTable.Rows.Count;
+
             switch (dataTable.Rows.Count)
             {
                 case 0:
@@ -82,28 +84,28 @@ namespace TeamPriject3_СollectionOfAttributes
                     label_name4.Text = "";
                     break;
                 case 1:
-                    label_name1.Text = list[0];
+                    label_name1.Text = list[a - 1];
                     label_name2.Text = "";
                     label_name3.Text = "";
                     label_name4.Text = "";
                     break;
                 case 2:
-                    label_name1.Text = list[0];
-                    label_name2.Text = list[1];
+                    label_name1.Text = list[a - 1];
+                    label_name2.Text = list[a - 2];
                     label_name3.Text = "";
                     label_name4.Text = "";
                     break;
                 case 3:
-                    label_name1.Text = list[0];
-                    label_name2.Text = list[1];
-                    label_name3.Text = list[2];
+                    label_name1.Text = list[a - 1];
+                    label_name2.Text = list[a - 2];
+                    label_name3.Text = list[a - 3];
                     label_name4.Text = "";
                     break;
                 default:
-                    label_name1.Text = list[0];
-                    label_name2.Text = list[1];
-                    label_name3.Text = list[2];
-                    label_name4.Text = list[3];
+                    label_name1.Text = list[a - 1];
+                    label_name2.Text = list[a - 2];
+                    label_name3.Text = list[a - 3];
+                    label_name4.Text = list[a - 4];
                     break;
             }
 
@@ -140,7 +142,7 @@ namespace TeamPriject3_СollectionOfAttributes
 
         private void label3_Click(object sender, EventArgs e)
         {
-            CreateNewAlbum createNewAlbum = new CreateNewAlbum();
+            CreateNewAlbum createNewAlbum = new CreateNewAlbum(login);
             createNewAlbum.ShowDialog();
         }
     }

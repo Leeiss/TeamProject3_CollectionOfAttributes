@@ -105,6 +105,7 @@
             this.bathroom_label.Size = new System.Drawing.Size(187, 32);
             this.bathroom_label.TabIndex = 12;
             this.bathroom_label.Text = "Ванная комната";
+            this.bathroom_label.Click += new System.EventHandler(this.bathroom_label_Click);
             // 
             // kitchen_label
             // 
@@ -116,6 +117,7 @@
             this.kitchen_label.Size = new System.Drawing.Size(78, 32);
             this.kitchen_label.TabIndex = 13;
             this.kitchen_label.Text = "Кухня";
+            this.kitchen_label.Click += new System.EventHandler(this.kitchen_label_Click);
             // 
             // livingroom_label
             // 
@@ -127,6 +129,7 @@
             this.livingroom_label.Size = new System.Drawing.Size(123, 32);
             this.livingroom_label.TabIndex = 14;
             this.livingroom_label.Text = "Гостинная";
+            this.livingroom_label.Click += new System.EventHandler(this.livingroom_label_Click);
             // 
             // bedroom_label
             // 
@@ -138,6 +141,7 @@
             this.bedroom_label.Size = new System.Drawing.Size(105, 32);
             this.bedroom_label.TabIndex = 15;
             this.bedroom_label.Text = "Спальня";
+            this.bedroom_label.Click += new System.EventHandler(this.bedroom_label_Click);
             // 
             // diningroom_label
             // 
@@ -149,6 +153,7 @@
             this.diningroom_label.Size = new System.Drawing.Size(116, 32);
             this.diningroom_label.TabIndex = 16;
             this.diningroom_label.Text = "Столовая";
+            this.diningroom_label.Click += new System.EventHandler(this.diningroom_label_Click);
             // 
             // laundry_label
             // 
@@ -160,6 +165,7 @@
             this.laundry_label.Size = new System.Drawing.Size(134, 32);
             this.laundry_label.TabIndex = 17;
             this.laundry_label.Text = "Прачечная";
+            this.laundry_label.Click += new System.EventHandler(this.laundry_label_Click);
             // 
             // cabinet_label
             // 
@@ -171,6 +177,7 @@
             this.cabinet_label.Size = new System.Drawing.Size(103, 32);
             this.cabinet_label.TabIndex = 18;
             this.cabinet_label.Text = "Кабинет";
+            this.cabinet_label.Click += new System.EventHandler(this.cabinet_label_Click);
             // 
             // create_button
             // 
@@ -181,6 +188,7 @@
             this.create_button.Size = new System.Drawing.Size(105, 43);
             this.create_button.TabIndex = 19;
             this.create_button.UseVisualStyleBackColor = false;
+            this.create_button.Click += new System.EventHandler(this.create_button_Click);
             // 
             // back_button
             // 
@@ -191,6 +199,7 @@
             this.back_button.Size = new System.Drawing.Size(105, 43);
             this.back_button.TabIndex = 20;
             this.back_button.UseVisualStyleBackColor = false;
+            this.back_button.Click += new System.EventHandler(this.back_button_Click);
             // 
             // CreateNewAlbum
             // 
@@ -214,6 +223,7 @@
             this.Controls.Add(this.CreateNewAlbum_lable);
             this.Name = "CreateNewAlbum";
             this.Text = "CreateNewAlbum";
+            this.Load += new System.EventHandler(this.CreateNewAlbum_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
