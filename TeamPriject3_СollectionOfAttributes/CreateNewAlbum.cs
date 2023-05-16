@@ -15,7 +15,7 @@ namespace TeamPriject3_СollectionOfAttributes
     {
 
 
-        protected string category;
+        protected string room_type;
         protected string login;
 
         public CreateNewAlbum()
@@ -62,20 +62,22 @@ namespace TeamPriject3_СollectionOfAttributes
             DataBase db = new DataBase();
             DataTable dataTable = new DataTable();
 
-            MySqlCommand command = new MySqlCommand("INSERT INTO album (`userlogin`, `Album_name`, `category`) VALUES(@login, @album_name, @category)", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("INSERT INTO album (`userlogin`, `Album_name`, `room_type`) VALUES(@login, @album_name, @room_type)", db.GetConnection());
             command.Parameters.Add("@login", MySqlDbType.VarChar).Value = login;
             command.Parameters.Add("@album_name", MySqlDbType.VarChar).Value = namealbum_textbox.Text;
-            command.Parameters.Add("@category", MySqlDbType.VarChar).Value = category;
+            command.Parameters.Add("@room_type", MySqlDbType.VarChar).Value = room_type;
 
             db.OpenConnection();
 
             if (namealbum_textbox.Text != "")
             {
-                if (category != null)
+                if (room_type != null)
                 {
                     if (command.ExecuteNonQuery() == 1)
                     {
-                        this.Close();
+                        AddFurniture addFurniture = new AddFurniture(login, namealbum_textbox.Text, room_type);
+                        addFurniture.ShowDialog();
+
 
                     }
                     else
@@ -107,37 +109,37 @@ namespace TeamPriject3_СollectionOfAttributes
 
         private void bathroom_label_Click(object sender, EventArgs e)
         {
-            category = "bathroom";
+            room_type = "Ванная";
         }
 
         private void kitchen_label_Click(object sender, EventArgs e)
         {
-            category = "kitchen";
+            room_type = "Кухня";
         }
 
         private void livingroom_label_Click(object sender, EventArgs e)
         {
-            category = "livingroom";
+            room_type = "Гостинная";
         }
 
         private void bedroom_label_Click(object sender, EventArgs e)
         {
-            category = "bedroom";
+            room_type = "Спальня";
         }
 
         private void diningroom_label_Click(object sender, EventArgs e)
         {
-            category = "diningroom";
+            room_type = "Столовая";
         }
 
         private void laundry_label_Click(object sender, EventArgs e)
         {
-            category = "laundry";
+            room_type = "Прачечная";
         }
 
         private void cabinet_label_Click(object sender, EventArgs e)
         {
-            category = "cabinet";
+            room_type = "Кабинет";
         }
     }
 }

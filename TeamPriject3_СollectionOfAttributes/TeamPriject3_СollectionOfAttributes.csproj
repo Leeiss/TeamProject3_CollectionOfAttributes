@@ -86,6 +86,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddFurniture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFurniture.Designer.cs">
+      <DependentUpon>AddFurniture.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllAlbums.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     <Compile Include="Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddFurniture.resx">
+      <DependentUpon>AddFurniture.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AllAlbums.resx">
       <DependentUpon>AllAlbums.cs</DependentUpon>
     </EmbeddedResource>

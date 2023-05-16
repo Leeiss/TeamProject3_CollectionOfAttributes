@@ -62,7 +62,6 @@ namespace TeamPriject3_СollectionOfAttributes
 
             db.OpenConnection();
             DbDataReader reader = command.ExecuteReader();
-            string statement = "";
 
 
             List<string> list = new List<string>();
@@ -72,7 +71,7 @@ namespace TeamPriject3_СollectionOfAttributes
             {
                 list.Add(reader[1].ToString());
             }
-
+            db.CloseConnection();
             int a = dataTable.Rows.Count;
 
             switch (dataTable.Rows.Count)
