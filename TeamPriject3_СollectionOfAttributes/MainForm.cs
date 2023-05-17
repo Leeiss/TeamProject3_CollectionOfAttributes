@@ -145,5 +145,22 @@ namespace TeamPriject3_СollectionOfAttributes
             CreateNewAlbum createNewAlbum = new CreateNewAlbum(login);
             createNewAlbum.ShowDialog();
         }
+
+        private void label_name1_Click(object sender, EventArgs e)
+        {
+            AlbumBrausing albumBrowsing = new AlbumBrausing();
+            albumBrowsing.ShowDialog();
+        }
+
+        private void label_show_allAlbums_Click(object sender, EventArgs e)
+        {
+            Albums albums = new Albums(login);
+            albums.ShowDialog();
+        }
+
+        private void label_login_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

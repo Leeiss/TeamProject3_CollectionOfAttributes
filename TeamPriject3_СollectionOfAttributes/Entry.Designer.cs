@@ -104,7 +104,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(235)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(535, 689);
+            this.ClientSize = new System.Drawing.Size(535, 483);
             this.Controls.Add(this.buttonEnter);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.entered_password);

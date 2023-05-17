@@ -62,7 +62,7 @@ namespace TeamPriject3_СollectionOfAttributes
             DataBase db = new DataBase();
             DataTable dataTable = new DataTable();
 
-            MySqlCommand command = new MySqlCommand("INSERT INTO album (`userlogin`, `Album_name`, `category`) VALUES(@login, @album_name, @category)", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("INSERT INTO album (`userlogin`, `Album_name`, `room_type`) VALUES(@login, @album_name, @category)", db.GetConnection());
             command.Parameters.Add("@login", MySqlDbType.VarChar).Value = login;
             command.Parameters.Add("@album_name", MySqlDbType.VarChar).Value = namealbum_textbox.Text;
             command.Parameters.Add("@category", MySqlDbType.VarChar).Value = category;

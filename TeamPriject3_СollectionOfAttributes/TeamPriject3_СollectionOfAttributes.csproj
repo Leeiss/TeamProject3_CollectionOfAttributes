@@ -86,6 +86,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlbumBrausing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlbumBrausing.Designer.cs">
+      <DependentUpon>AlbumBrausing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Albums.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Albums.Designer.cs">
+      <DependentUpon>Albums.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllAlbums.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +143,12 @@
     <Compile Include="Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AlbumBrausing.resx">
+      <DependentUpon>AlbumBrausing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Albums.resx">
+      <DependentUpon>Albums.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AllAlbums.resx">
       <DependentUpon>AllAlbums.cs</DependentUpon>
     </EmbeddedResource>
