@@ -18,8 +18,11 @@ namespace TeamPriject3_СollectionOfAttributes
         protected string login;
         protected string name_album;
         protected string room_type;
+        protected string category;
 
-
+        private int str = 0;
+        protected int call_photos = 0;
+        
 
         public AddFurniture()
         {
@@ -70,7 +73,8 @@ namespace TeamPriject3_СollectionOfAttributes
             }
             db.CloseConnection();
 
-            switch (dataTable.Rows.Count)
+
+            switch (list.Count)
             {
                 case 0:
                     label_name1.Text = "";
@@ -79,6 +83,7 @@ namespace TeamPriject3_СollectionOfAttributes
                     label_name4.Text = "";
                     label_name5.Text = "";
                     label_name6.Text = "";
+
                     break;
                 case 1:
                     label_name1.Text = list[0];
@@ -137,16 +142,292 @@ namespace TeamPriject3_СollectionOfAttributes
 
         }
 
+        
+
+
+        private void ShowPhotos()
+        {
+
+
+            DataBase db = new DataBase();
+            DataTable dataTable = new DataTable();
+
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `furniture` WHERE  room_type_name = @rtname AND category = @cat ", db.GetConnection());
+            command.Parameters.Add("@rtname", MySqlDbType.VarChar).Value = room_type;
+            command.Parameters.Add("@cat", MySqlDbType.VarChar).Value = category;
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            adapter.SelectCommand = command;
+
+            adapter.Fill(dataTable);
+
+            db.OpenConnection();
+            DbDataReader reader = command.ExecuteReader();
+
+
+            List<string> listpath = new List<string>();
+
+
+
+            while (reader.Read())
+            {
+                listpath.Add(reader[5].ToString());
+            }
+
+            db.CloseConnection();
+
+            int a = listpath.Count;
+            call_photos = a;
+
+
+            
+            if (str*6 > a)
+            {
+                str --;
+            }
+
+            int c = a - str * 6;
+
+            if (str > 0)
+            {
+         
+                switch (c)
+                {
+                    case 0:
+                        
+                        pictureBox1.Image = null;
+                        pictureBox2.Image = null;
+                        pictureBox3.Image = null;
+                        pictureBox4.Image = null;
+                        pictureBox5.Image = null;
+                        pictureBox6.Image = null;
+
+                        break;
+                    case 1:
+                        pictureBox1.Image = Image.FromFile(listpath[a-1]);
+                        pictureBox2.Image = null;
+                        pictureBox3.Image = null;
+                        pictureBox4.Image = null;
+                        pictureBox5.Image = null;
+                        pictureBox6.Image = null;
+                        break;
+                    case 2:
+                        pictureBox1.Image = Image.FromFile(listpath[a-1]);
+                        pictureBox2.Image = Image.FromFile(listpath[a-2]);
+                        pictureBox3.Image = null;
+                        pictureBox4.Image = null;
+                        pictureBox5.Image = null;
+                        pictureBox6.Image = null;
+                        break;
+                    case 3:
+                        pictureBox1.Image = Image.FromFile(listpath[a-1]);
+                        pictureBox2.Image = Image.FromFile(listpath[a-2]);
+                        pictureBox3.Image = Image.FromFile(listpath[a-3]);
+                        pictureBox4.Image = null;
+                        pictureBox5.Image = null;
+                        pictureBox6.Image = null;
+                        break;
+                    case 4:
+                        pictureBox1.Image = Image.FromFile(listpath[a-1]);
+                        pictureBox2.Image = Image.FromFile(listpath[a-2]);
+                        pictureBox3.Image = Image.FromFile(listpath[a-3]);
+                        pictureBox4.Image = Image.FromFile(listpath[a-4]);
+                        pictureBox5.Image = null;
+                        pictureBox6.Image = null;
+                        break;
+                    case 5:
+                        pictureBox1.Image = Image.FromFile(listpath[a-1]);
+                        pictureBox2.Image = Image.FromFile(listpath[a-2]);
+                        pictureBox3.Image = Image.FromFile(listpath[a-3]);
+                        pictureBox4.Image = Image.FromFile(listpath[a-4]);
+                        pictureBox4.Image = Image.FromFile(listpath[a-5]);
+                        pictureBox6.Image = null;
+                        break;
+                    default:
+                        pictureBox1.Image = Image.FromFile(listpath[a - 1]);
+                        pictureBox2.Image = Image.FromFile(listpath[a - 2]);
+                        pictureBox3.Image = Image.FromFile(listpath[a-3]);
+                        pictureBox4.Image = Image.FromFile(listpath[a-4]);
+                        pictureBox4.Image = Image.FromFile(listpath[a-5]);
+                        pictureBox5.Image = Image.FromFile(listpath[a-6]);
+                        break;
+                }
+
+            }
+            else
+            {
+                switch (a)
+                {
+                    case 0:
+                        pictureBox1.Image = null;
+                        pictureBox2.Image = null;
+                        pictureBox3.Image = null;
+                        pictureBox4.Image = null;
+                        pictureBox5.Image = null;
+                        pictureBox6.Image = null;
+
+                        break;
+                    case 1:
+                        pictureBox1.Image = Image.FromFile(listpath[0]);
+                        pictureBox2.Image = null;
+                        pictureBox3.Image = null;
+                        pictureBox4.Image = null;
+                        pictureBox5.Image = null;
+                        pictureBox6.Image = null;
+                        break;
+                    case 2:
+                        pictureBox1.Image = Image.FromFile(listpath[0]);
+                        pictureBox2.Image = Image.FromFile(listpath[1]);
+                        pictureBox3.Image = null;
+                        pictureBox4.Image = null;
+                        pictureBox5.Image = null;
+                        pictureBox6.Image = null;
+                        break;
+                    case 3:
+                        pictureBox1.Image = Image.FromFile(listpath[0]);
+                        pictureBox2.Image = Image.FromFile(listpath[1]);
+                        pictureBox3.Image = Image.FromFile(listpath[2]);
+                        pictureBox4.Image = null;
+                        pictureBox5.Image = null;
+                        pictureBox6.Image = null;
+                        break;
+                    case 4:
+                        pictureBox1.Image = Image.FromFile(listpath[0]);
+                        pictureBox2.Image = Image.FromFile(listpath[1]);
+                        pictureBox3.Image = Image.FromFile(listpath[2]);
+                        pictureBox4.Image = Image.FromFile(listpath[3]);
+                        pictureBox5.Image = null;
+                        pictureBox6.Image = null;
+                        break;
+                    case 5:
+                        pictureBox1.Image = Image.FromFile(listpath[0]);
+                        pictureBox2.Image = Image.FromFile(listpath[1]);
+                        pictureBox3.Image = Image.FromFile(listpath[2]);
+                        pictureBox4.Image = Image.FromFile(listpath[3]);
+                        pictureBox5.Image = Image.FromFile(listpath[4]);
+                        pictureBox6.Image = null;
+                        break;
+                    default:
+                        pictureBox1.Image = Image.FromFile(listpath[0]);
+                        pictureBox2.Image = Image.FromFile(listpath[1]);
+                        pictureBox3.Image = Image.FromFile(listpath[2]);
+                        pictureBox4.Image = Image.FromFile(listpath[3]);
+                        pictureBox5.Image = Image.FromFile(listpath[4]);
+                        pictureBox6.Image = Image.FromFile(listpath[5]);
+                        break;
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        private void label_name1_Click(object sender, EventArgs e)
+        {
+            if (label_name1.Text != "")
+            {
+                category = label_name1.Text;
+                ShowPhotos();
+            }
+        }
+
+        private void label_name2_Click(object sender, EventArgs e)
+        {
+            if (label_name2.Text != "")
+            {
+                category = label_name2.Text;
+                ShowPhotos();
+            }
+        }
+
+        private void label_name3_Click(object sender, EventArgs e)
+        {
+            if (label_name3.Text != "")
+            {
+                category = label_name3.Text;
+                ShowPhotos();
+            }
+        }
+
+        private void label_name4_Click(object sender, EventArgs e)
+        {
+            if (label_name4.Text != "")
+            {
+                category = label_name4.Text;
+                ShowPhotos();
+            }
+        }
+
+        private void label_name5_Click(object sender, EventArgs e)
+        {
+            if (label_name5.Text != "")
+            {
+                category = label_name5.Text;
+                ShowPhotos();
+            }
+        }
+
+        private void label_name6_Click(object sender, EventArgs e)
+        {
+            if (label_name6.Text != "")
+            {
+                category = label_name6.Text;
+                ShowPhotos();
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        private void pictureBox_logo_Click(object sender, EventArgs e)
+        {
+
+        }
         private void label_album_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label_name1_Click(object sender, EventArgs e)
+        private void label_go_forward_Click(object sender, EventArgs e)
         {
-            if (label1.Text != "")
-            {
+            str += 1;
+            ShowPhotos();
+        }
 
+        private void label_go_back_Click(object sender, EventArgs e)
+        {
+            if (str != 0)
+            {
+                str -= 1;
+                ShowPhotos();
             }
         }
     }

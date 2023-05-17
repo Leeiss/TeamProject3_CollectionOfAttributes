@@ -72,9 +72,9 @@ namespace TeamPriject3_СollectionOfAttributes
                 list.Add(reader[1].ToString());
             }
             db.CloseConnection();
-            int a = dataTable.Rows.Count;
+            int a = list.Count;
 
-            switch (dataTable.Rows.Count)
+            switch (a)
             {
                 case 0:
                     label_name1.Text = "";

@@ -53,7 +53,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label_go_forward = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_profile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -282,14 +281,6 @@
             this.label3.TabIndex = 34;
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label4
-            // 
-            this.label4.Image = ((System.Drawing.Image)(resources.GetObject("label4.Image")));
-            this.label4.Location = new System.Drawing.Point(599, 395);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 45);
-            this.label4.TabIndex = 35;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -303,7 +294,6 @@
             this.Controls.Add(this.label_name1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label_addalbums);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label_go_forward);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label_go_back);
@@ -358,6 +348,5 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label_go_forward;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
     }
 }
