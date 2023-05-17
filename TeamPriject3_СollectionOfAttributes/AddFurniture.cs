@@ -189,136 +189,77 @@ namespace TeamPriject3_СollectionOfAttributes
 
             int c = a - str * 6;
 
-            if (str > 0)
+
+            int maxstr = a / 6;
+
+
+
+           
+            switch (c)
             {
-         
-                switch (c)
-                {
-                    case 0:
+                case 0:
                         
-                        pictureBox1.Image = null;
-                        pictureBox2.Image = null;
-                        pictureBox3.Image = null;
-                        pictureBox4.Image = null;
-                        pictureBox5.Image = null;
-                        pictureBox6.Image = null;
+                    pictureBox1.Image = null;
+                    pictureBox2.Image = null;
+                    pictureBox3.Image = null;
+                    pictureBox4.Image = null;
+                    pictureBox5.Image = null;
+                    pictureBox6.Image = null;
 
-                        break;
-                    case 1:
-                        pictureBox1.Image = Image.FromFile(listpath[a-1]);
-                        pictureBox2.Image = null;
-                        pictureBox3.Image = null;
-                        pictureBox4.Image = null;
-                        pictureBox5.Image = null;
-                        pictureBox6.Image = null;
-                        break;
-                    case 2:
-                        pictureBox1.Image = Image.FromFile(listpath[a-1]);
-                        pictureBox2.Image = Image.FromFile(listpath[a-2]);
-                        pictureBox3.Image = null;
-                        pictureBox4.Image = null;
-                        pictureBox5.Image = null;
-                        pictureBox6.Image = null;
-                        break;
-                    case 3:
-                        pictureBox1.Image = Image.FromFile(listpath[a-1]);
-                        pictureBox2.Image = Image.FromFile(listpath[a-2]);
-                        pictureBox3.Image = Image.FromFile(listpath[a-3]);
-                        pictureBox4.Image = null;
-                        pictureBox5.Image = null;
-                        pictureBox6.Image = null;
-                        break;
-                    case 4:
-                        pictureBox1.Image = Image.FromFile(listpath[a-1]);
-                        pictureBox2.Image = Image.FromFile(listpath[a-2]);
-                        pictureBox3.Image = Image.FromFile(listpath[a-3]);
-                        pictureBox4.Image = Image.FromFile(listpath[a-4]);
-                        pictureBox5.Image = null;
-                        pictureBox6.Image = null;
-                        break;
-                    case 5:
-                        pictureBox1.Image = Image.FromFile(listpath[a-1]);
-                        pictureBox2.Image = Image.FromFile(listpath[a-2]);
-                        pictureBox3.Image = Image.FromFile(listpath[a-3]);
-                        pictureBox4.Image = Image.FromFile(listpath[a-4]);
-                        pictureBox4.Image = Image.FromFile(listpath[a-5]);
-                        pictureBox6.Image = null;
-                        break;
-                    default:
-                        pictureBox1.Image = Image.FromFile(listpath[a - 1]);
-                        pictureBox2.Image = Image.FromFile(listpath[a - 2]);
-                        pictureBox3.Image = Image.FromFile(listpath[a-3]);
-                        pictureBox4.Image = Image.FromFile(listpath[a-4]);
-                        pictureBox4.Image = Image.FromFile(listpath[a-5]);
-                        pictureBox5.Image = Image.FromFile(listpath[a-6]);
-                        break;
-                }
-
+                    break;
+                case 1:
+                    pictureBox1.Image = Image.FromFile(listpath[str*6]);
+                    pictureBox2.Image = null;
+                    pictureBox3.Image = null;
+                    pictureBox4.Image = null;
+                    pictureBox5.Image = null;
+                    pictureBox6.Image = null;
+                    break;
+                case 2:
+                    pictureBox1.Image = Image.FromFile(listpath[str * 6 ]);
+                    pictureBox2.Image = Image.FromFile(listpath[str * 6 + 1]);
+                    pictureBox3.Image = null;
+                    pictureBox4.Image = null;
+                    pictureBox5.Image = null;
+                    pictureBox6.Image = null;
+                    break;
+                case 3:
+                    pictureBox1.Image = Image.FromFile(listpath[str * 6]);
+                    pictureBox2.Image = Image.FromFile(listpath[str * 6 + 1]);
+                    pictureBox3.Image = Image.FromFile(listpath[str * 6 + 2]);
+                    pictureBox4.Image = null;
+                    pictureBox5.Image = null;
+                    pictureBox6.Image = null;
+                    break;
+                case 4:
+                    pictureBox1.Image = Image.FromFile(listpath[str * 6]);
+                    pictureBox2.Image = Image.FromFile(listpath[str * 6 + 1]);
+                    pictureBox3.Image = Image.FromFile(listpath[str * 6 + 2]);
+                    pictureBox4.Image = Image.FromFile(listpath[str * 6 + 3]);
+                    pictureBox5.Image = null;
+                    pictureBox6.Image = null;
+                    break;
+                case 5:
+                    pictureBox1.Image = Image.FromFile(listpath[str * 6]);
+                    pictureBox2.Image = Image.FromFile(listpath[str * 6 + 1]);
+                    pictureBox3.Image = Image.FromFile(listpath[str * 6 + 2]);
+                    pictureBox4.Image = Image.FromFile(listpath[str * 6 + 3]);
+                    pictureBox5.Image = Image.FromFile(listpath[str * 6 + 4]);
+                    pictureBox6.Image = null;
+                    break;
+                default:
+                    pictureBox1.Image = Image.FromFile(listpath[str * 6]);
+                    pictureBox2.Image = Image.FromFile(listpath[str * 6 + 1]);
+                    pictureBox3.Image = Image.FromFile(listpath[str * 6 + 2]);
+                    pictureBox4.Image = Image.FromFile(listpath[str * 6 + 3]);
+                    pictureBox5.Image = Image.FromFile(listpath[str * 6 + 4]);
+                    pictureBox6.Image = Image.FromFile(listpath[str * 6 + 5]);
+                    break;
             }
-            else
-            {
-                switch (a)
-                {
-                    case 0:
-                        pictureBox1.Image = null;
-                        pictureBox2.Image = null;
-                        pictureBox3.Image = null;
-                        pictureBox4.Image = null;
-                        pictureBox5.Image = null;
-                        pictureBox6.Image = null;
 
-                        break;
-                    case 1:
-                        pictureBox1.Image = Image.FromFile(listpath[0]);
-                        pictureBox2.Image = null;
-                        pictureBox3.Image = null;
-                        pictureBox4.Image = null;
-                        pictureBox5.Image = null;
-                        pictureBox6.Image = null;
-                        break;
-                    case 2:
-                        pictureBox1.Image = Image.FromFile(listpath[0]);
-                        pictureBox2.Image = Image.FromFile(listpath[1]);
-                        pictureBox3.Image = null;
-                        pictureBox4.Image = null;
-                        pictureBox5.Image = null;
-                        pictureBox6.Image = null;
-                        break;
-                    case 3:
-                        pictureBox1.Image = Image.FromFile(listpath[0]);
-                        pictureBox2.Image = Image.FromFile(listpath[1]);
-                        pictureBox3.Image = Image.FromFile(listpath[2]);
-                        pictureBox4.Image = null;
-                        pictureBox5.Image = null;
-                        pictureBox6.Image = null;
-                        break;
-                    case 4:
-                        pictureBox1.Image = Image.FromFile(listpath[0]);
-                        pictureBox2.Image = Image.FromFile(listpath[1]);
-                        pictureBox3.Image = Image.FromFile(listpath[2]);
-                        pictureBox4.Image = Image.FromFile(listpath[3]);
-                        pictureBox5.Image = null;
-                        pictureBox6.Image = null;
-                        break;
-                    case 5:
-                        pictureBox1.Image = Image.FromFile(listpath[0]);
-                        pictureBox2.Image = Image.FromFile(listpath[1]);
-                        pictureBox3.Image = Image.FromFile(listpath[2]);
-                        pictureBox4.Image = Image.FromFile(listpath[3]);
-                        pictureBox5.Image = Image.FromFile(listpath[4]);
-                        pictureBox6.Image = null;
-                        break;
-                    default:
-                        pictureBox1.Image = Image.FromFile(listpath[0]);
-                        pictureBox2.Image = Image.FromFile(listpath[1]);
-                        pictureBox3.Image = Image.FromFile(listpath[2]);
-                        pictureBox4.Image = Image.FromFile(listpath[3]);
-                        pictureBox5.Image = Image.FromFile(listpath[4]);
-                        pictureBox6.Image = Image.FromFile(listpath[5]);
-                        break;
-                }
-            }
         }
+            
+        
 
 
 
