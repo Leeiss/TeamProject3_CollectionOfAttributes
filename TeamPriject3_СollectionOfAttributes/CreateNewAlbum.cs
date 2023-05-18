@@ -60,7 +60,6 @@ namespace TeamPriject3_СollectionOfAttributes
 
 
             DataBase db = new DataBase();
-            DataTable table2 = new DataTable();
             db.OpenConnection();
             MySqlCommand command = new MySqlCommand("INSERT INTO album (`userlogin`, `Album_name`, `room_type`) VALUES(@login, @album_name, @room_type)", db.GetConnection());
             command.Parameters.Add("@login", MySqlDbType.VarChar).Value = login;
@@ -82,6 +81,7 @@ namespace TeamPriject3_СollectionOfAttributes
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             adapter.SelectCommand = command2;
+            DataTable table2 = new DataTable();
             adapter.Fill(table2);
 
 
