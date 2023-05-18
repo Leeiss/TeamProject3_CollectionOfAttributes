@@ -111,7 +111,6 @@ namespace TeamPriject3_СollectionOfAttributes
 
 
 
-
         }
 
         private void label_go_forward_Click(object sender, EventArgs e)
