@@ -224,6 +224,7 @@
             this.Controls.Add(this.picturebox_profile);
             this.Name = "Look_Album";
             this.Text = "Look_Album";
+            this.Load += new System.EventHandler(this.Look_Album_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
