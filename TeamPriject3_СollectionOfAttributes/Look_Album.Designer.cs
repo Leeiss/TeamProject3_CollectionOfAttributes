@@ -79,6 +79,7 @@
             this.pictureBox6.Size = new System.Drawing.Size(327, 196);
             this.pictureBox6.TabIndex = 56;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // pictureBox5
             // 
@@ -87,6 +88,7 @@
             this.pictureBox5.Size = new System.Drawing.Size(327, 196);
             this.pictureBox5.TabIndex = 55;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox4
             // 
@@ -95,6 +97,7 @@
             this.pictureBox4.Size = new System.Drawing.Size(327, 196);
             this.pictureBox4.TabIndex = 54;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox3
             // 
@@ -103,6 +106,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(327, 196);
             this.pictureBox3.TabIndex = 53;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -111,6 +115,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(327, 196);
             this.pictureBox2.TabIndex = 52;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -119,6 +124,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(329, 196);
             this.pictureBox1.TabIndex = 51;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel1
             // 
@@ -178,6 +184,7 @@
             this.bedroom_label.Size = new System.Drawing.Size(385, 47);
             this.bedroom_label.TabIndex = 63;
             this.bedroom_label.Text = "+ Добавить предметы ";
+            this.bedroom_label.Click += new System.EventHandler(this.bedroom_label_Click);
             // 
             // label1
             // 
@@ -189,6 +196,7 @@
             this.label1.Size = new System.Drawing.Size(339, 47);
             this.label1.TabIndex = 64;
             this.label1.Text = "- Удалить предметы";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Look_Album
             // 
