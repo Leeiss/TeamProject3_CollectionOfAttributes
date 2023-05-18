@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Look_Album));
-            this.buttonEnter = new System.Windows.Forms.Button();
             this.label_go_forward = new System.Windows.Forms.Label();
             this.label_go_back = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -54,18 +53,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_profile)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonEnter
-            // 
-            this.buttonEnter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(98)))));
-            this.buttonEnter.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonEnter.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonEnter.Location = new System.Drawing.Point(462, 828);
-            this.buttonEnter.Name = "buttonEnter";
-            this.buttonEnter.Size = new System.Drawing.Size(371, 70);
-            this.buttonEnter.TabIndex = 59;
-            this.buttonEnter.Text = "Завершить создание";
-            this.buttonEnter.UseVisualStyleBackColor = false;
             // 
             // label_go_forward
             // 
@@ -210,7 +197,6 @@
             this.ClientSize = new System.Drawing.Size(1322, 928);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bedroom_label);
-            this.Controls.Add(this.buttonEnter);
             this.Controls.Add(this.label_go_forward);
             this.Controls.Add(this.label_go_back);
             this.Controls.Add(this.pictureBox6);
@@ -241,8 +227,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonEnter;
         private System.Windows.Forms.Label label_go_forward;
         private System.Windows.Forms.Label label_go_back;
         private System.Windows.Forms.PictureBox pictureBox6;
