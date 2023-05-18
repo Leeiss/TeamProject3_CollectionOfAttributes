@@ -212,6 +212,7 @@
             this.label_name1.Size = new System.Drawing.Size(367, 41);
             this.label_name1.TabIndex = 24;
             this.label_name1.Text = "Спальня";
+            this.label_name1.Click += new System.EventHandler(this.label_name1_Click);
             // 
             // label_name2
             // 
@@ -222,6 +223,7 @@
             this.label_name2.Size = new System.Drawing.Size(367, 41);
             this.label_name2.TabIndex = 25;
             this.label_name2.Text = "Кухня";
+            this.label_name2.Click += new System.EventHandler(this.label_name2_Click);
             // 
             // label_name3
             // 
@@ -232,6 +234,7 @@
             this.label_name3.Size = new System.Drawing.Size(367, 41);
             this.label_name3.TabIndex = 26;
             this.label_name3.Text = "Ванна комната";
+            this.label_name3.Click += new System.EventHandler(this.label_name3_Click);
             // 
             // label_name4
             // 
@@ -241,6 +244,7 @@
             this.label_name4.Name = "label_name4";
             this.label_name4.Size = new System.Drawing.Size(367, 41);
             this.label_name4.TabIndex = 27;
+            this.label_name4.Click += new System.EventHandler(this.label_name4_Click);
             // 
             // label_show_allAlbums
             // 

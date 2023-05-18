@@ -65,7 +65,6 @@ namespace TeamPriject3_СollectionOfAttributes
             if (count > 0)
             {
                 MessageBox.Show("Альбом с таким названием уже существует");
-                this.Close();
             }
             else
             {
@@ -77,7 +76,10 @@ namespace TeamPriject3_СollectionOfAttributes
                 cmd.ExecuteNonQuery();
 
                 connection.Close();
+                AddFurniture addFurniture = new AddFurniture(login, namealbum_textbox.Text, room_type);
+                addFurniture.ShowDialog();
                 MessageBox.Show("Альбом успешно создан");
+
                 this.Close();
             }    
             

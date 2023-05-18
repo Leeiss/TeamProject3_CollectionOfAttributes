@@ -74,6 +74,7 @@
             this.label_go_forward.Name = "label_go_forward";
             this.label_go_forward.Size = new System.Drawing.Size(70, 61);
             this.label_go_forward.TabIndex = 58;
+            this.label_go_forward.Click += new System.EventHandler(this.label_go_forward_Click);
             // 
             // label_go_back
             // 
@@ -82,6 +83,7 @@
             this.label_go_back.Name = "label_go_back";
             this.label_go_back.Size = new System.Drawing.Size(72, 60);
             this.label_go_back.TabIndex = 57;
+            this.label_go_back.Click += new System.EventHandler(this.label_go_back_Click);
             // 
             // pictureBox6
             // 

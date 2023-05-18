@@ -173,5 +173,44 @@ namespace TeamPriject3_СollectionOfAttributes
         {
             GetPhotoWithAPI();
         }
+
+        private void label_name1_Click(object sender, EventArgs e)
+        {
+            if (label_name1.Text != "")
+            {
+                Look_Album look_Album = new Look_Album(label_name1.Text, login);
+                look_Album.ShowDialog();
+            }
+            
+
+
+        }
+
+        private void label_name2_Click(object sender, EventArgs e)
+        {
+            if (label_name2.Text != "")
+            {
+                Look_Album look_Album = new Look_Album(label_name2.Text, login);
+                look_Album.ShowDialog();
+            }
+        }
+
+        private void label_name3_Click(object sender, EventArgs e)
+        {
+            if (label_name3.Text != "")
+            {
+                Look_Album look_Album = new Look_Album(label_name3.Text, login);
+                look_Album.ShowDialog();
+            }
+        }
+
+        private void label_name4_Click(object sender, EventArgs e)
+        {
+            if (label_name4.Text != "")
+            {
+                Look_Album look_Album = new Look_Album(label_name4.Text, login);
+                look_Album.ShowDialog();
+            }
+        }
     }
 }

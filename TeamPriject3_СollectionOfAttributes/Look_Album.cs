@@ -7,6 +7,7 @@ using System.Data.Common;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -57,20 +58,34 @@ namespace TeamPriject3_СollectionOfAttributes
 
             while (reader.Read())
             {
-                listId_furnitures.Add(reader[0].ToString());
-                MySqlCommand command2 = new MySqlCommand("SELECT * FROM `furniture` WHERE  FurnitureID = @Id", db.GetConnection());
-                command.Parameters.Add("@Id", MySqlDbType.VarChar).Value = listId_furnitures[0];
+                listId_furnitures.Add(reader[1].ToString());
+            }
+            db.CloseConnection();
+
+            command = null;
+
+            for (int i = 0; i < listId_furnitures.Count;i++)
+            {
+
+                db.OpenConnection();
+                command = new MySqlCommand("SELECT * FROM `furniture` WHERE  FurnitureID = @Id", db.GetConnection());
+                command.Parameters.Add("@Id", MySqlDbType.VarChar).Value = listId_furnitures[i];
+
+
+
                 MySqlDataAdapter adapter2 = new MySqlDataAdapter();
                 adapter2.SelectCommand = command;
                 DataTable dataTable2 = new DataTable();
                 adapter2.Fill(dataTable2);
+                DbDataReader reader2 = command.ExecuteReader();
+                while (reader2.Read())
+                {
 
-
-                DbDataReader reader2 = command2.ExecuteReader();
-                listpath.Add(reader[5].ToString());
+                    listpath.Add(reader2[5].ToString());
+                }
+                
+                db.CloseConnection();
             }
-
-
 
             int a = listpath.Count;
             call_photos = a;
@@ -150,12 +165,6 @@ namespace TeamPriject3_СollectionOfAttributes
                     pictureBox6.Image = Image.FromFile(listpath[str * 6 + 5]);
                     break;
             }
-
-
-
-
-            db.CloseConnection();
-
         }
 
 
@@ -178,10 +187,21 @@ namespace TeamPriject3_СollectionOfAttributes
             label_album.Text = album_name;
 
             ShowPhotos();
+        }
 
+        private void label_go_forward_Click(object sender, EventArgs e)
+        {
+            str++;
+            ShowPhotos();
+        }
 
-
-
+        private void label_go_back_Click(object sender, EventArgs e)
+        {
+            if (str != 0)
+            {
+                str -= 1;
+                ShowPhotos();
+            }
         }
     }
 }
