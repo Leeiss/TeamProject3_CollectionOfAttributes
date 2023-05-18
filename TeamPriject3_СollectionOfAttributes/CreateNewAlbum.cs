@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,7 @@ namespace TeamPriject3_СollectionOfAttributes
 
         protected string room_type;
         protected string login;
+        private string connectionString = "server=localhost;port=3306;username=root;password=root;database=collectionofattributes";
 
         public CreateNewAlbum()
         {
@@ -51,94 +53,35 @@ namespace TeamPriject3_СollectionOfAttributes
 
         private void create_button_Click(object sender, EventArgs e)
         {
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
 
+            MySqlCommand cmd = new MySqlCommand("SELECT COUNT(*) FROM album WHERE Album_name = @albumName AND userlogin = @userLogin", connection);
+            cmd.Parameters.AddWithValue("@albumName", namealbum_textbox.Text);
+            cmd.Parameters.AddWithValue("@userLogin", login);
 
+            int count = Convert.ToInt32(cmd.ExecuteScalar());
 
-
-
-
-
-
-            DataBase db = new DataBase();
-            db.OpenConnection();
-            MySqlCommand command = new MySqlCommand("INSERT INTO album (`userlogin`, `Album_name`, `room_type`) VALUES(@login, @album_name, @room_type)", db.GetConnection());
-            command.Parameters.Add("@login", MySqlDbType.VarChar).Value = login;
-            command.Parameters.Add("@album_name", MySqlDbType.VarChar).Value = namealbum_textbox.Text;
-            command.Parameters.Add("@room_type", MySqlDbType.VarChar).Value = room_type;
-
-            
-
-
-
-            
-
-            MySqlCommand command2 = new MySqlCommand("SELECT * FROM album WHERE Album_name = @Id ", db.GetConnection());
-            command.Parameters.Add("@Id", MySqlDbType.VarChar).Value = namealbum_textbox.Text;
-
-
-
-
-
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-            adapter.SelectCommand = command2;
-            DataTable table2 = new DataTable();
-            adapter.Fill(table2);
-
-
-
-
-
-
-
-
-
-
-
-
-
-            if (namealbum_textbox.Text != "")
+            if (count > 0)
             {
-                if (room_type != null)
-                {
-                    if (table2.Rows.Count == 0)
-                    {
-                        if (command.ExecuteNonQuery() == 1)
-                        {
-                            AddFurniture addFurniture = new AddFurniture(login, namealbum_textbox.Text, room_type);
-                            addFurniture.ShowDialog();
-
-
-                        }
-                        else
-                        {
-                            MessageBox.Show("Ошибка");
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Альбом с таким имене уже существует");
-                    }
-
-                }
-                else
-                {
-                    MessageBox.Show("Вы не выбрали категорию");
-                }
-
-            } else
-            {
-                MessageBox.Show("Вы не написали название альбома");
+                MessageBox.Show("Альбом с таким названием уже существует");
+                this.Close();
             }
-            db.CloseConnection();
+            else
+            {
+                cmd = new MySqlCommand("INSERT INTO album (Album_name, userlogin, room_type) VALUES (@albumName, @userLogin, @roomType)", connection);
+                cmd.Parameters.AddWithValue("@albumName", namealbum_textbox.Text);
+                cmd.Parameters.AddWithValue("@userLogin", login);
+                cmd.Parameters.AddWithValue("@roomType", room_type);
 
+                cmd.ExecuteNonQuery();
 
+                connection.Close();
+                MessageBox.Show("Альбом успешно создан");
+                this.Close();
+            }    
+            
 
-
-
-
-
-
-            this.Close();
         }
 
         private void bathroom_label_Click(object sender, EventArgs e)
