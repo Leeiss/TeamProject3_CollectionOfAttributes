@@ -411,25 +411,6 @@ namespace TeamPriject3_СollectionOfAttributes
             }
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         private void pictureBox_logo_Click(object sender, EventArgs e)
         {
 
