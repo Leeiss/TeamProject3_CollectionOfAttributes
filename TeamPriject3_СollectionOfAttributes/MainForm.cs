@@ -1,31 +1,46 @@
 ﻿using MySql.Data.MySqlClient;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.Common;
-using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Text;
+using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace TeamPriject3_СollectionOfAttributes
 {
     public partial class MainForm : Form
     {
         protected string login;
+        private const string PexelsApiUrl = "https://api.pexels.com/v1/search?query=interior";
+        private const string PexelsApiKey = "3GOrWfrocQkomEscjWMcQl2evbNvUjpesFSoQ51PljIdV3ob0PrKGJ8g";
 
+        private Random _random;
+        private HttpClient _httpClient;
         public MainForm()
         {
             InitializeComponent();
+            _random = new Random();
+            _httpClient = new HttpClient();
+
+            _httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + PexelsApiKey);
+            _httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
         }
 
         public MainForm(string name)
         {
             InitializeComponent();
             login = name;
+            _random = new Random();
+            _httpClient = new HttpClient();
+
+            _httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + PexelsApiKey);
+            _httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -47,6 +62,42 @@ namespace TeamPriject3_СollectionOfAttributes
         {
             label_login.Text = login;
             UpdateAlbums();
+            GetPhotoWithAPI();
+        }
+
+        private async void GetPhotoWithAPI()
+        {
+            try
+            {
+                const string apiKey = "3GOrWfrocQkomEscjWMcQl2evbNvUjpesFSoQ51PljIdV3ob0PrKGJ8g";
+                var pexelsApiUrl = "https://api.pexels.com/v1/search?query=interior&per_page=80&page=1";
+
+                var request = new HttpRequestMessage(HttpMethod.Get, pexelsApiUrl);
+                request.Headers.Add("Authorization", apiKey);
+                var response = await _httpClient.SendAsync(request);
+                response.EnsureSuccessStatusCode();
+
+                var json = JObject.Parse(await response.Content.ReadAsStringAsync());
+
+                var images = json["photos"];
+
+                var randomIndex = _random.Next(images.Count());
+                var randomImage = images[randomIndex];
+                var imageUrl = randomImage["src"]["large"];
+                var imageStream = await DownloadImageAsync(imageUrl.ToString());
+                var image = Image.FromStream(imageStream);
+                pictureBox3.Image = image;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Нужно включить vpn: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private async Task<Stream> DownloadImageAsync(string imageUrl)
+        {
+            HttpResponseMessage response = await _httpClient.GetAsync(imageUrl);
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadAsStreamAsync();
         }
 
         private void UpdateAlbums()
@@ -116,6 +167,11 @@ namespace TeamPriject3_СollectionOfAttributes
             CreateNewAlbum createNewAlbum = new CreateNewAlbum(login);
             createNewAlbum.ShowDialog();
             UpdateAlbums();
+        }
+
+        private void label_go_forward_Click(object sender, EventArgs e)
+        {
+            GetPhotoWithAPI();
         }
     }
 }
