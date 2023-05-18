@@ -129,7 +129,7 @@ namespace TeamPriject3_СollectionOfAttributes
                         command.Parameters.Add("@email", MySqlDbType.VarChar).Value = invented_email.Text;
                         command.Parameters.Add("@admin_rights", MySqlDbType.VarChar).Value = AdminRight;
 
-                    if (command.ExecuteNonQuery() == 1)
+                        if (command.ExecuteNonQuery() == 1)
                         {
                             MessageBox.Show("Добро пожаловать!");
                             MainForm mainForm = new MainForm();
@@ -139,13 +139,14 @@ namespace TeamPriject3_СollectionOfAttributes
                         {
                             MessageBox.Show("Ошибка");
                         }
-                        db.CloseConnection();
+                        
                         Close();
                     }
                     else
                     {
                         MessageBox.Show("Введенные вами логин или email уже были раннее зарегестрированы");
                     }
+                    db.CloseConnection();
                 }
                 else
                 {

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace TeamPriject3_СollectionOfAttributes
 {
@@ -167,12 +168,13 @@ namespace TeamPriject3_СollectionOfAttributes
 
 
             List<string> listpath = new List<string>();
-
+            List<string> listId = new List<string>();
 
 
             while (reader.Read())
             {
                 listpath.Add(reader[5].ToString());
+                listId.Add(reader[0].ToString());
             }
 
             db.CloseConnection();
@@ -200,60 +202,105 @@ namespace TeamPriject3_СollectionOfAttributes
                 case 0:
                         
                     pictureBox1.Image = null;
+                    pictureBox1.Name= null;
                     pictureBox2.Image = null;
+                    pictureBox2.Name = null;
                     pictureBox3.Image = null;
+                    pictureBox3.Name = null;
                     pictureBox4.Image = null;
+                    pictureBox4.Name = null;
                     pictureBox5.Image = null;
+                    pictureBox5.Name = null;
                     pictureBox6.Image = null;
-
+                    pictureBox6.Name = null;
                     break;
                 case 1:
                     pictureBox1.Image = Image.FromFile(listpath[str*6]);
+                    pictureBox1.Name = listId[str * 6];
                     pictureBox2.Image = null;
+                    pictureBox2.Name = null;
                     pictureBox3.Image = null;
+                    pictureBox3.Name = null;
                     pictureBox4.Image = null;
+                    pictureBox4.Name = null;
                     pictureBox5.Image = null;
+                    pictureBox5.Name = null;
                     pictureBox6.Image = null;
+                    pictureBox6.Name = null;
+
                     break;
                 case 2:
                     pictureBox1.Image = Image.FromFile(listpath[str * 6 ]);
+                    pictureBox1.Name = listId[str * 6];
                     pictureBox2.Image = Image.FromFile(listpath[str * 6 + 1]);
+                    pictureBox2.Name = listId[str * 6 + 1];
                     pictureBox3.Image = null;
+                    pictureBox3.Name = null;
                     pictureBox4.Image = null;
+                    pictureBox4.Name = null;
                     pictureBox5.Image = null;
+                    pictureBox5.Name = null;
                     pictureBox6.Image = null;
+                    pictureBox6.Name = null;
+
                     break;
                 case 3:
                     pictureBox1.Image = Image.FromFile(listpath[str * 6]);
+                    pictureBox1.Name = listId[str * 6];
                     pictureBox2.Image = Image.FromFile(listpath[str * 6 + 1]);
+                    pictureBox2.Name = listId[str * 6 + 1];
                     pictureBox3.Image = Image.FromFile(listpath[str * 6 + 2]);
                     pictureBox4.Image = null;
+                    pictureBox4.Name = null;
                     pictureBox5.Image = null;
+                    pictureBox5.Name = null;
                     pictureBox6.Image = null;
+                    pictureBox6.Name = null;
+
                     break;
                 case 4:
                     pictureBox1.Image = Image.FromFile(listpath[str * 6]);
+                    pictureBox1.Name = listId[str * 6];
                     pictureBox2.Image = Image.FromFile(listpath[str * 6 + 1]);
+                    pictureBox2.Name = listId[str * 6 + 1];
                     pictureBox3.Image = Image.FromFile(listpath[str * 6 + 2]);
+                    pictureBox3.Name = listId[str * 6 + 2];
                     pictureBox4.Image = Image.FromFile(listpath[str * 6 + 3]);
+                    pictureBox4.Name = listId[str * 6 + 3];
                     pictureBox5.Image = null;
+                    pictureBox5.Name = null;
                     pictureBox6.Image = null;
+                    pictureBox6.Name = null;
+
                     break;
                 case 5:
                     pictureBox1.Image = Image.FromFile(listpath[str * 6]);
+                    pictureBox1.Name = listId[str * 6];
                     pictureBox2.Image = Image.FromFile(listpath[str * 6 + 1]);
+                    pictureBox2.Name = listId[str * 6 + 1];
                     pictureBox3.Image = Image.FromFile(listpath[str * 6 + 2]);
+                    pictureBox3.Name = listId[str * 6 + 2];
                     pictureBox4.Image = Image.FromFile(listpath[str * 6 + 3]);
+                    pictureBox4.Name = listId[str * 6 + 3];
                     pictureBox5.Image = Image.FromFile(listpath[str * 6 + 4]);
+                    pictureBox5.Name = listId[str * 6 + 4];
                     pictureBox6.Image = null;
+                    pictureBox6.Name = null;
+
                     break;
                 default:
                     pictureBox1.Image = Image.FromFile(listpath[str * 6]);
+                    pictureBox1.Name = listId[str*6];
                     pictureBox2.Image = Image.FromFile(listpath[str * 6 + 1]);
+                    pictureBox2.Name = listId[str * 6 + 1];
                     pictureBox3.Image = Image.FromFile(listpath[str * 6 + 2]);
+                    pictureBox3.Name = listId[str * 6 + 2];
                     pictureBox4.Image = Image.FromFile(listpath[str * 6 + 3]);
+                    pictureBox4.Name = listId[str * 6 + 3];
                     pictureBox5.Image = Image.FromFile(listpath[str * 6 + 4]);
+                    pictureBox5.Name = listId[str * 6 + 4];
                     pictureBox6.Image = Image.FromFile(listpath[str * 6 + 5]);
+                    pictureBox6.Name = listId[str * 6 + 5];
                     break;
             }
 
@@ -261,7 +308,26 @@ namespace TeamPriject3_СollectionOfAttributes
             
         
 
+        private void addtocollection(string Idfurniture)
+        {
+            DataBase db = new DataBase();
+            db.OpenConnection();
+            MySqlCommand command = new MySqlCommand("INSERT INTO furniture_collection (`CollectionID`, `FurnitureID`) VALUES(@cId, @fId)", db.GetConnection());
+            command.Parameters.Add("@cId", MySqlDbType.VarChar).Value = name_album;
+            command.Parameters.Add("@fId", MySqlDbType.VarChar).Value = Idfurniture;
 
+
+            if (command.ExecuteNonQuery() == 1)
+            {
+                MessageBox.Show("Вещь успешно добавлена!");
+            }
+            else
+            {
+                MessageBox.Show("Ошибка");
+            }
+
+            db.CloseConnection();
+        }
 
 
 
@@ -369,6 +435,58 @@ namespace TeamPriject3_СollectionOfAttributes
             {
                 str -= 1;
                 ShowPhotos();
+            }
+        }
+
+
+
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Image != null)
+            {
+                addtocollection(pictureBox1.Name);
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (pictureBox2.Image != null)
+            {
+                addtocollection(pictureBox2.Name);
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if (pictureBox3.Image != null)
+            {
+                addtocollection(pictureBox3.Name);
+            }
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            if (pictureBox4.Image != null)
+            {
+                addtocollection(pictureBox4.Name);
+            }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            if (pictureBox5.Image != null)
+            {
+                addtocollection(pictureBox5.Name);
+            }
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            if (pictureBox6.Image != null)
+            {
+                addtocollection(pictureBox6.Name);
+
             }
         }
     }

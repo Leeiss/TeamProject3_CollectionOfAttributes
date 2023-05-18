@@ -48,6 +48,7 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label_go_back = new System.Windows.Forms.Label();
             this.label_go_forward = new System.Windows.Forms.Label();
+            this.buttonEnter = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_profile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -175,6 +176,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(329, 196);
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -183,6 +185,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(327, 196);
             this.pictureBox2.TabIndex = 32;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox3
             // 
@@ -191,6 +194,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(327, 196);
             this.pictureBox3.TabIndex = 33;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox4
             // 
@@ -199,6 +203,7 @@
             this.pictureBox4.Size = new System.Drawing.Size(327, 196);
             this.pictureBox4.TabIndex = 34;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox5
             // 
@@ -207,6 +212,7 @@
             this.pictureBox5.Size = new System.Drawing.Size(327, 196);
             this.pictureBox5.TabIndex = 35;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox6
             // 
@@ -215,6 +221,7 @@
             this.pictureBox6.Size = new System.Drawing.Size(327, 196);
             this.pictureBox6.TabIndex = 36;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // label_go_back
             // 
@@ -234,12 +241,25 @@
             this.label_go_forward.TabIndex = 38;
             this.label_go_forward.Click += new System.EventHandler(this.label_go_forward_Click);
             // 
+            // buttonEnter
+            // 
+            this.buttonEnter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(98)))));
+            this.buttonEnter.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonEnter.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonEnter.Location = new System.Drawing.Point(462, 828);
+            this.buttonEnter.Name = "buttonEnter";
+            this.buttonEnter.Size = new System.Drawing.Size(371, 70);
+            this.buttonEnter.TabIndex = 39;
+            this.buttonEnter.Text = "Завершить создание";
+            this.buttonEnter.UseVisualStyleBackColor = false;
+            // 
             // AddFurniture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1348, 910);
+            this.Controls.Add(this.buttonEnter);
             this.Controls.Add(this.label_go_forward);
             this.Controls.Add(this.label_go_back);
             this.Controls.Add(this.pictureBox6);
@@ -295,5 +315,6 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label_go_back;
         private System.Windows.Forms.Label label_go_forward;
+        private System.Windows.Forms.Button buttonEnter;
     }
 }
