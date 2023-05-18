@@ -45,18 +45,21 @@ namespace TeamPriject3_СollectionOfAttributes
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            
             label_login.Text = login;
+            UpdateAlbums();
+        }
 
+        private void UpdateAlbums()
+        {
             DataBase db = new DataBase();
-            DataTable dataTable = new DataTable(); 
+            DataTable dataTable = new DataTable();
 
             MySqlCommand command = new MySqlCommand("SELECT * FROM album WHERE  userlogin = @L", db.GetConnection());
             command.Parameters.Add("@L", MySqlDbType.VarChar).Value = login;
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-            adapter.SelectCommand= command;
+            adapter.SelectCommand = command;
 
             adapter.Fill(dataTable);
 
@@ -107,41 +110,12 @@ namespace TeamPriject3_СollectionOfAttributes
                     label_name4.Text = list[a - 4];
                     break;
             }
-
-
-
-
         }
-
-        private void label_go_forward_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_showprofile_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_box3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picturebox_profile_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_addalbums_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void label3_Click(object sender, EventArgs e)
         {
             CreateNewAlbum createNewAlbum = new CreateNewAlbum(login);
             createNewAlbum.ShowDialog();
+            UpdateAlbums();
         }
     }
 }

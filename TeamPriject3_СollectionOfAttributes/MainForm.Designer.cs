@@ -98,7 +98,6 @@
             this.picturebox_profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picturebox_profile.TabIndex = 11;
             this.picturebox_profile.TabStop = false;
-            this.picturebox_profile.Click += new System.EventHandler(this.picturebox_profile_Click);
             // 
             // label_login
             // 
@@ -138,7 +137,6 @@
             this.label_showprofile.TabIndex = 15;
             this.label_showprofile.Text = "Смотреть профиль";
             this.label_showprofile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_showprofile.Click += new System.EventHandler(this.label_showprofile_Click);
             // 
             // label_albums
             // 
@@ -159,7 +157,6 @@
             this.label_addalbums.TabIndex = 18;
             this.label_addalbums.Text = "Создать новый";
             this.label_addalbums.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_addalbums.Click += new System.EventHandler(this.label_addalbums_Click);
             // 
             // label_box1
             // 
@@ -184,7 +181,6 @@
             this.label_box3.Name = "label_box3";
             this.label_box3.Size = new System.Drawing.Size(46, 45);
             this.label_box3.TabIndex = 21;
-            this.label_box3.Click += new System.EventHandler(this.label_box3_Click);
             // 
             // label_box4
             // 
@@ -274,7 +270,6 @@
             this.label_go_forward.Name = "label_go_forward";
             this.label_go_forward.Size = new System.Drawing.Size(35, 33);
             this.label_go_forward.TabIndex = 33;
-            this.label_go_forward.Click += new System.EventHandler(this.label_go_forward_Click);
             // 
             // label3
             // 
