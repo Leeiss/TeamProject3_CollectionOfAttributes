@@ -20,6 +20,7 @@ namespace TeamPriject3_СollectionOfAttributes
         private const string PexelsApiUrl = "https://api.pexels.com/v1/search?query=interior";
         private const string PexelsApiKey = "3GOrWfrocQkomEscjWMcQl2evbNvUjpesFSoQ51PljIdV3ob0PrKGJ8g";
 
+        private string photoUrl;
         private Random _random;
         private HttpClient _httpClient;
         public MainForm()
@@ -43,21 +44,7 @@ namespace TeamPriject3_СollectionOfAttributes
             _httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void MainForm_Load(object sender, EventArgs e)
         {
             label_login.Text = login;
@@ -69,28 +56,32 @@ namespace TeamPriject3_СollectionOfAttributes
         {
             try
             {
-                const string apiKey = "3GOrWfrocQkomEscjWMcQl2evbNvUjpesFSoQ51PljIdV3ob0PrKGJ8g";
-                var pexelsApiUrl = "https://api.pexels.com/v1/search?query=interior&per_page=80&page=1";
+                panelLoading.Visible = true;
+                {
+                    const string apiKey = "3GOrWfrocQkomEscjWMcQl2evbNvUjpesFSoQ51PljIdV3ob0PrKGJ8g";
+                    var pexelsApiUrl = "https://api.pexels.com/v1/search?query=interior&per_page=80&page=1";
 
-                var request = new HttpRequestMessage(HttpMethod.Get, pexelsApiUrl);
-                request.Headers.Add("Authorization", apiKey);
-                var response = await _httpClient.SendAsync(request);
-                response.EnsureSuccessStatusCode();
+                    var request = new HttpRequestMessage(HttpMethod.Get, pexelsApiUrl);
+                    request.Headers.Add("Authorization", apiKey);
+                    var response = await _httpClient.SendAsync(request);
+                    response.EnsureSuccessStatusCode();
 
-                var json = JObject.Parse(await response.Content.ReadAsStringAsync());
+                    var json = JObject.Parse(await response.Content.ReadAsStringAsync());
 
-                var images = json["photos"];
+                    var images = json["photos"];
 
-                var randomIndex = _random.Next(images.Count());
-                var randomImage = images[randomIndex];
-                var imageUrl = randomImage["src"]["large"];
-                var imageStream = await DownloadImageAsync(imageUrl.ToString());
-                var image = Image.FromStream(imageStream);
-                pictureBox3.Image = image;
+                    var randomIndex = _random.Next(images.Count());
+                    var randomImage = images[randomIndex];
+                    photoUrl = randomImage["src"]["large"].ToString(); // Сохраняем URL в переменную photoUrl
+                    var imageStream = await DownloadImageAsync(photoUrl);
+                    var image = Image.FromStream(imageStream);
+                    pictureBox3.Image = image;
+                }
+                panelLoading.Visible = false;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Нужно включить vpn: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Нужно включить vpn: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private async Task<Stream> DownloadImageAsync(string imageUrl)
@@ -211,6 +202,13 @@ namespace TeamPriject3_СollectionOfAttributes
                 Look_Album look_Album = new Look_Album(label_name4.Text, login);
                 look_Album.ShowDialog();
             }
+        }
+
+        
+        private void ideasBtn_Click(object sender, EventArgs e)
+        {
+            UserIdeas userIdeas = new UserIdeas(login);
+            userIdeas.ShowDialog();
         }
     }
 }

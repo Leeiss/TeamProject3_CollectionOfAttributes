@@ -33,12 +33,8 @@ namespace TeamPriject3_СollectionOfAttributes
             InitializeComponent();
         }
 
-
-
         private void ShowPhotos()
         {
-
-            
             DataBase db = new DataBase();
             DataTable dataTable = new DataTable();
             db.OpenConnection();

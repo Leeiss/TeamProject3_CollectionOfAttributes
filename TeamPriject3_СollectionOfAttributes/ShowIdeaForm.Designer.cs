@@ -1,6 +1,6 @@
 ﻿namespace TeamPriject3_СollectionOfAttributes
 {
-    partial class AllAlbums
+    partial class ShowIdeaForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.picture = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.SuspendLayout();
             // 
-            // AllAlbums
+            // picture
+            // 
+            this.picture.Location = new System.Drawing.Point(13, 13);
+            this.picture.Name = "picture";
+            this.picture.Size = new System.Drawing.Size(983, 915);
+            this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picture.TabIndex = 0;
+            this.picture.TabStop = false;
+            // 
+            // ShowIdeaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 562);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "AllAlbums";
-            this.Text = "Все альбомы";
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(1008, 940);
+            this.Controls.Add(this.picture);
+            this.Name = "ShowIdeaForm";
+            this.Text = "Идея";
+            this.Load += new System.EventHandler(this.ShowIdeaForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.PictureBox picture;
     }
 }

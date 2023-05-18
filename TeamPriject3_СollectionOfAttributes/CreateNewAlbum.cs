@@ -33,19 +33,6 @@ namespace TeamPriject3_СollectionOfAttributes
         }
 
 
-
-        
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void CreateNewAlbum_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void back_button_Click(object sender, EventArgs e)
         {
             this.Close();

@@ -209,7 +209,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Registration";
-            this.Text = "Registration";
+            this.Text = "Регистрация";
             this.closing_panel.ResumeLayout(false);
             this.closing_panel.PerformLayout();
             this.ResumeLayout(false);

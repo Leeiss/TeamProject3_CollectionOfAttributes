@@ -138,14 +138,7 @@ namespace TeamPriject3_СollectionOfAttributes
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         
-
-
         private void ShowPhotos()
         {
 

@@ -39,9 +39,10 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(98)))));
             this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(112, 357);
+            this.button1.Location = new System.Drawing.Point(149, 446);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(371, 70);
+            this.button1.Size = new System.Drawing.Size(495, 88);
             this.button1.TabIndex = 0;
             this.button1.Text = "Регистрация через e-mail";
             this.button1.UseVisualStyleBackColor = false;
@@ -52,9 +53,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(122)))), ((int)(((byte)(121)))));
-            this.label1.Location = new System.Drawing.Point(104, 37);
+            this.label1.Location = new System.Drawing.Point(139, 46);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(379, 92);
+            this.label1.Size = new System.Drawing.Size(517, 126);
             this.label1.TabIndex = 1;
             this.label1.Text = "Лучшее место для\r\nсоздания дизайна\r\n";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -62,9 +64,10 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(118, 206);
+            this.button2.Location = new System.Drawing.Point(157, 258);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(371, 65);
+            this.button2.Size = new System.Drawing.Size(495, 81);
             this.button2.TabIndex = 2;
             this.button2.Text = "Войти";
             this.button2.UseVisualStyleBackColor = true;
@@ -77,25 +80,27 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(122)))), ((int)(((byte)(121)))));
-            this.label2.Location = new System.Drawing.Point(118, 302);
+            this.label2.Location = new System.Drawing.Point(157, 378);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(376, 27);
+            this.label2.Size = new System.Drawing.Size(515, 36);
             this.label2.TabIndex = 3;
             this.label2.Text = "--------------------Или--------------------";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Firstin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(235)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(584, 503);
+            this.ClientSize = new System.Drawing.Size(779, 629);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Firstin";
-            this.Text = "Form1";
+            this.Text = "Вход";
             this.ResumeLayout(false);
             this.PerformLayout();
 
