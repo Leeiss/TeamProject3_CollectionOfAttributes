@@ -252,6 +252,7 @@
             this.buttonEnter.TabIndex = 39;
             this.buttonEnter.Text = "Завершить создание";
             this.buttonEnter.UseVisualStyleBackColor = false;
+            this.buttonEnter.Click += new System.EventHandler(this.buttonEnter_Click);
             // 
             // AddFurniture
             // 

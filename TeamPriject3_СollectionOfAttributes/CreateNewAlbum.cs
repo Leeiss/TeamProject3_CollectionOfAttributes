@@ -60,31 +60,65 @@ namespace TeamPriject3_СollectionOfAttributes
 
 
             DataBase db = new DataBase();
-            DataTable dataTable = new DataTable();
-
+            DataTable table2 = new DataTable();
+            db.OpenConnection();
             MySqlCommand command = new MySqlCommand("INSERT INTO album (`userlogin`, `Album_name`, `room_type`) VALUES(@login, @album_name, @room_type)", db.GetConnection());
             command.Parameters.Add("@login", MySqlDbType.VarChar).Value = login;
             command.Parameters.Add("@album_name", MySqlDbType.VarChar).Value = namealbum_textbox.Text;
             command.Parameters.Add("@room_type", MySqlDbType.VarChar).Value = room_type;
 
-            db.OpenConnection();
+            
+
+
+
+            
+
+            MySqlCommand command2 = new MySqlCommand("SELECT * FROM album WHERE Album_name = @Id ", db.GetConnection());
+            command.Parameters.Add("@Id", MySqlDbType.VarChar).Value = namealbum_textbox.Text;
+
+
+
+
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            adapter.SelectCommand = command2;
+            adapter.Fill(table2);
+
+
+
+
+
+
+
+
+
+
+
+
 
             if (namealbum_textbox.Text != "")
             {
                 if (room_type != null)
                 {
-                    if (command.ExecuteNonQuery() == 1)
+                    if (table2.Rows.Count == 0)
                     {
-                        AddFurniture addFurniture = new AddFurniture(login, namealbum_textbox.Text, room_type);
-                        addFurniture.ShowDialog();
+                        if (command.ExecuteNonQuery() == 1)
+                        {
+                            AddFurniture addFurniture = new AddFurniture(login, namealbum_textbox.Text, room_type);
+                            addFurniture.ShowDialog();
 
 
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ошибка");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Ошибка");
+                        MessageBox.Show("Альбом с таким имене уже существует");
                     }
-                    
+
                 }
                 else
                 {

@@ -117,6 +117,12 @@
     <Compile Include="Firstin.Designer.cs">
       <DependentUpon>Firstin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Look_Album.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Look_Album.Designer.cs">
+      <DependentUpon>Look_Album.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Firstin.resx">
       <DependentUpon>Firstin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Look_Album.resx">
+      <DependentUpon>Look_Album.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mail.resx">
       <DependentUpon>Mail.cs</DependentUpon>

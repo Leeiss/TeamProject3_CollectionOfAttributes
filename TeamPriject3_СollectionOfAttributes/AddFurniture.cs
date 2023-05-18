@@ -311,32 +311,55 @@ namespace TeamPriject3_СollectionOfAttributes
         private void addtocollection(string Idfurniture)
         {
             DataBase db = new DataBase();
+            DataTable dataTable = new DataTable();
+
             db.OpenConnection();
-            MySqlCommand command = new MySqlCommand("INSERT INTO furniture_collection (`CollectionID`, `FurnitureID`) VALUES(@cId, @fId)", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("INSERT INTO furniture_collection (`Collection_name`, `FurnitureID`) VALUES(@cId, @fId)", db.GetConnection());
             command.Parameters.Add("@cId", MySqlDbType.VarChar).Value = name_album;
             command.Parameters.Add("@fId", MySqlDbType.VarChar).Value = Idfurniture;
 
 
-            if (command.ExecuteNonQuery() == 1)
+            MySqlCommand command2 = new MySqlCommand("SELECT * FROM furniture_collection WHERE Collection_name = @cId AND FurnitureID = @fId ", db.GetConnection()); // создаем объект и передаем команду для вытягивания из бд логина и пароля из бд
+            command2.Parameters.Add("@cId", MySqlDbType.VarChar).Value = name_album;
+            command2.Parameters.Add("@fId", MySqlDbType.VarChar).Value = Idfurniture;
+
+
+
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            adapter.SelectCommand = command2;
+            DataTable table2 = new DataTable();
+            adapter.Fill(table2);
+
+
+
+
+
+
+            if (table2.Rows.Count == 0)
             {
-                MessageBox.Show("Вещь успешно добавлена!");
-            }
-            else
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Вещь успешно добавлена!");
+                }
+                else
+                {
+                    MessageBox.Show("Ошибка");
+                }
+            }else
             {
-                MessageBox.Show("Ошибка");
+                MessageBox.Show("Этот предмет уже добавлен");
+
             }
+
+
 
             db.CloseConnection();
         }
 
 
 
-
-
-
-
-
-
+         
 
 
 
@@ -488,6 +511,11 @@ namespace TeamPriject3_СollectionOfAttributes
                 addtocollection(pictureBox6.Name);
 
             }
+        }
+
+        private void buttonEnter_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
