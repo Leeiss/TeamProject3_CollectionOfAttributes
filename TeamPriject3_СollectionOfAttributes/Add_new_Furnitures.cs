@@ -21,5 +21,10 @@ namespace TeamPriject3_СollectionOfAttributes
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
