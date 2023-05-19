@@ -53,10 +53,6 @@
             this.panelLoading = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label_box1 = new System.Windows.Forms.Label();
-            this.label_box2 = new System.Windows.Forms.Label();
-            this.label_box3 = new System.Windows.Forms.Label();
-            this.label_box4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_profile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ideasBtn)).BeginInit();
@@ -178,48 +174,6 @@
             this.label_addalbums.Text = "Создать новый";
             this.label_addalbums.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_addalbums.Click += new System.EventHandler(this.label_addalbums_Click);
-            // 
-            // label_box1
-            // 
-            this.label_box1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label_box1.Image = ((System.Drawing.Image)(resources.GetObject("label_box1.Image")));
-            this.label_box1.Location = new System.Drawing.Point(29, 451);
-            this.label_box1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_box1.Name = "label_box1";
-            this.label_box1.Size = new System.Drawing.Size(60, 56);
-            this.label_box1.TabIndex = 19;
-            this.label_box1.Click += new System.EventHandler(this.label_box1_Click);
-            // 
-            // label_box2
-            // 
-            this.label_box2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label_box2.Image = ((System.Drawing.Image)(resources.GetObject("label_box2.Image")));
-            this.label_box2.Location = new System.Drawing.Point(28, 545);
-            this.label_box2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_box2.Name = "label_box2";
-            this.label_box2.Size = new System.Drawing.Size(61, 56);
-            this.label_box2.TabIndex = 20;
-            // 
-            // label_box3
-            // 
-            this.label_box3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label_box3.Image = ((System.Drawing.Image)(resources.GetObject("label_box3.Image")));
-            this.label_box3.Location = new System.Drawing.Point(28, 640);
-            this.label_box3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_box3.Name = "label_box3";
-            this.label_box3.Size = new System.Drawing.Size(61, 56);
-            this.label_box3.TabIndex = 21;
-            this.label_box3.Click += new System.EventHandler(this.label_box3_Click);
-            // 
-            // label_box4
-            // 
-            this.label_box4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label_box4.Image = ((System.Drawing.Image)(resources.GetObject("label_box4.Image")));
-            this.label_box4.Location = new System.Drawing.Point(28, 729);
-            this.label_box4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_box4.Name = "label_box4";
-            this.label_box4.Size = new System.Drawing.Size(61, 56);
-            this.label_box4.TabIndex = 22;
             // 
             // label_name1
             // 
@@ -411,10 +365,6 @@
             this.Controls.Add(this.label_name4);
             this.Controls.Add(this.label_name3);
             this.Controls.Add(this.label_name2);
-            this.Controls.Add(this.label_box4);
-            this.Controls.Add(this.label_box3);
-            this.Controls.Add(this.label_box2);
-            this.Controls.Add(this.label_box1);
             this.Controls.Add(this.lable_showprofile);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox_logo);
