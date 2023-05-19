@@ -48,7 +48,6 @@
             this.label_name3 = new System.Windows.Forms.Label();
             this.label_name4 = new System.Windows.Forms.Label();
             this.label_show_allAlbums = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label_go_forward = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -57,11 +56,12 @@
             this.showBtn = new System.Windows.Forms.Label();
             this.panelLoading = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_profile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ideasBtn)).BeginInit();
             this.panelLoading.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -99,7 +99,7 @@
             // picturebox_profile
             // 
             this.picturebox_profile.Image = ((System.Drawing.Image)(resources.GetObject("picturebox_profile.Image")));
-            this.picturebox_profile.Location = new System.Drawing.Point(12, 141);
+            this.picturebox_profile.Location = new System.Drawing.Point(12, 138);
             this.picturebox_profile.Name = "picturebox_profile";
             this.picturebox_profile.Size = new System.Drawing.Size(72, 70);
             this.picturebox_profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,7 +110,7 @@
             // 
             this.label_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_login.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label_login.Location = new System.Drawing.Point(110, 142);
+            this.label_login.Location = new System.Drawing.Point(110, 138);
             this.label_login.Name = "label_login";
             this.label_login.Size = new System.Drawing.Size(155, 34);
             this.label_login.TabIndex = 12;
@@ -138,7 +138,7 @@
             this.label_showprofile.AutoSize = true;
             this.label_showprofile.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_showprofile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(98)))));
-            this.label_showprofile.Location = new System.Drawing.Point(112, 188);
+            this.label_showprofile.Location = new System.Drawing.Point(112, 185);
             this.label_showprofile.Name = "label_showprofile";
             this.label_showprofile.Size = new System.Drawing.Size(184, 23);
             this.label_showprofile.TabIndex = 15;
@@ -150,7 +150,7 @@
             // 
             this.label_albums.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label_albums.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_albums.Location = new System.Drawing.Point(6, 222);
+            this.label_albums.Location = new System.Drawing.Point(6, 236);
             this.label_albums.Name = "label_albums";
             this.label_albums.Size = new System.Drawing.Size(248, 38);
             this.label_albums.TabIndex = 16;
@@ -173,16 +173,17 @@
             // 
             this.label_box1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label_box1.Image = ((System.Drawing.Image)(resources.GetObject("label_box1.Image")));
-            this.label_box1.Location = new System.Drawing.Point(22, 354);
+            this.label_box1.Location = new System.Drawing.Point(22, 361);
             this.label_box1.Name = "label_box1";
             this.label_box1.Size = new System.Drawing.Size(45, 45);
             this.label_box1.TabIndex = 19;
+            this.label_box1.Click += new System.EventHandler(this.label_box1_Click);
             // 
             // label_box2
             // 
             this.label_box2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label_box2.Image = ((System.Drawing.Image)(resources.GetObject("label_box2.Image")));
-            this.label_box2.Location = new System.Drawing.Point(21, 425);
+            this.label_box2.Location = new System.Drawing.Point(21, 436);
             this.label_box2.Name = "label_box2";
             this.label_box2.Size = new System.Drawing.Size(46, 45);
             this.label_box2.TabIndex = 20;
@@ -191,16 +192,17 @@
             // 
             this.label_box3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label_box3.Image = ((System.Drawing.Image)(resources.GetObject("label_box3.Image")));
-            this.label_box3.Location = new System.Drawing.Point(21, 498);
+            this.label_box3.Location = new System.Drawing.Point(21, 512);
             this.label_box3.Name = "label_box3";
             this.label_box3.Size = new System.Drawing.Size(46, 45);
             this.label_box3.TabIndex = 21;
+            this.label_box3.Click += new System.EventHandler(this.label_box3_Click);
             // 
             // label_box4
             // 
             this.label_box4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label_box4.Image = ((System.Drawing.Image)(resources.GetObject("label_box4.Image")));
-            this.label_box4.Location = new System.Drawing.Point(21, 572);
+            this.label_box4.Location = new System.Drawing.Point(21, 583);
             this.label_box4.Name = "label_box4";
             this.label_box4.Size = new System.Drawing.Size(46, 45);
             this.label_box4.TabIndex = 22;
@@ -209,7 +211,7 @@
             // 
             this.label_name1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label_name1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_name1.Location = new System.Drawing.Point(111, 366);
+            this.label_name1.Location = new System.Drawing.Point(102, 373);
             this.label_name1.Name = "label_name1";
             this.label_name1.Size = new System.Drawing.Size(275, 33);
             this.label_name1.TabIndex = 24;
@@ -220,7 +222,7 @@
             // 
             this.label_name2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label_name2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_name2.Location = new System.Drawing.Point(111, 437);
+            this.label_name2.Location = new System.Drawing.Point(102, 448);
             this.label_name2.Name = "label_name2";
             this.label_name2.Size = new System.Drawing.Size(275, 33);
             this.label_name2.TabIndex = 25;
@@ -231,7 +233,7 @@
             // 
             this.label_name3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label_name3.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_name3.Location = new System.Drawing.Point(111, 510);
+            this.label_name3.Location = new System.Drawing.Point(102, 524);
             this.label_name3.Name = "label_name3";
             this.label_name3.Size = new System.Drawing.Size(275, 33);
             this.label_name3.TabIndex = 26;
@@ -242,7 +244,7 @@
             // 
             this.label_name4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label_name4.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_name4.Location = new System.Drawing.Point(111, 584);
+            this.label_name4.Location = new System.Drawing.Point(102, 595);
             this.label_name4.Name = "label_name4";
             this.label_name4.Size = new System.Drawing.Size(275, 33);
             this.label_name4.TabIndex = 27;
@@ -253,24 +255,13 @@
             this.label_show_allAlbums.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_show_allAlbums.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_show_allAlbums.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(98)))));
-            this.label_show_allAlbums.Location = new System.Drawing.Point(110, 634);
+            this.label_show_allAlbums.Location = new System.Drawing.Point(110, 642);
             this.label_show_allAlbums.Name = "label_show_allAlbums";
             this.label_show_allAlbums.Size = new System.Drawing.Size(238, 42);
             this.label_show_allAlbums.TabIndex = 29;
             this.label_show_allAlbums.Text = "Смотреть все";
             this.label_show_allAlbums.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_show_allAlbums.Click += new System.EventHandler(this.label_show_allAlbums_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(543, 100);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(630, 590);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 30;
-            this.pictureBox3.TabStop = false;
             // 
             // label18
             // 
@@ -285,7 +276,7 @@
             // 
             this.label_go_forward.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_go_forward.Image = ((System.Drawing.Image)(resources.GetObject("label_go_forward.Image")));
-            this.label_go_forward.Location = new System.Drawing.Point(1120, 373);
+            this.label_go_forward.Location = new System.Drawing.Point(566, 260);
             this.label_go_forward.Name = "label_go_forward";
             this.label_go_forward.Size = new System.Drawing.Size(35, 33);
             this.label_go_forward.TabIndex = 33;
@@ -314,9 +305,9 @@
             // 
             this.ideasBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ideasBtn.Image = ((System.Drawing.Image)(resources.GetObject("ideasBtn.Image")));
-            this.ideasBtn.Location = new System.Drawing.Point(832, 702);
+            this.ideasBtn.Location = new System.Drawing.Point(872, 653);
             this.ideasBtn.Name = "ideasBtn";
-            this.ideasBtn.Size = new System.Drawing.Size(61, 52);
+            this.ideasBtn.Size = new System.Drawing.Size(42, 40);
             this.ideasBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ideasBtn.TabIndex = 59;
             this.ideasBtn.TabStop = false;
@@ -328,7 +319,7 @@
             this.showBtn.AutoSize = true;
             this.showBtn.Font = new System.Drawing.Font("Arial", 9F);
             this.showBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(98)))));
-            this.showBtn.Location = new System.Drawing.Point(953, 733);
+            this.showBtn.Location = new System.Drawing.Point(920, 672);
             this.showBtn.Name = "showBtn";
             this.showBtn.Size = new System.Drawing.Size(220, 21);
             this.showBtn.TabIndex = 60;
@@ -340,11 +331,12 @@
             // 
             this.panelLoading.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelLoading.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelLoading.Controls.Add(this.label_go_forward);
             this.panelLoading.Controls.Add(this.label4);
-            this.panelLoading.Location = new System.Drawing.Point(543, 100);
-            this.panelLoading.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLoading.Location = new System.Drawing.Point(530, 110);
+            this.panelLoading.Margin = new System.Windows.Forms.Padding(2);
             this.panelLoading.Name = "panelLoading";
-            this.panelLoading.Size = new System.Drawing.Size(630, 590);
+            this.panelLoading.Size = new System.Drawing.Size(610, 537);
             this.panelLoading.TabIndex = 61;
             // 
             // label4
@@ -352,21 +344,32 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label4.Location = new System.Drawing.Point(274, 282);
+            this.label4.Location = new System.Drawing.Point(264, 255);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(155, 34);
             this.label4.TabIndex = 62;
             this.label4.Text = "загрузка..";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(530, 110);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(610, 537);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 30;
+            this.pictureBox3.TabStop = false;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1216, 806);
-            this.Controls.Add(this.label_go_forward);
+            this.ClientSize = new System.Drawing.Size(1216, 721);
             this.Controls.Add(this.panelLoading);
             this.Controls.Add(this.showBtn);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.ideasBtn);
             this.Controls.Add(this.label_go_back);
             this.Controls.Add(this.picturebox_profile);
@@ -377,7 +380,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label_addalbums);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label_show_allAlbums);
             this.Controls.Add(this.label_name4);
             this.Controls.Add(this.label_name3);
@@ -391,14 +393,15 @@
             this.Controls.Add(this.pictureBox_logo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "CREATIVE INTERIOR";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_profile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ideasBtn)).EndInit();
             this.panelLoading.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -425,7 +428,6 @@
         private System.Windows.Forms.Label label_name3;
         private System.Windows.Forms.Label label_name4;
         private System.Windows.Forms.Label label_show_allAlbums;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label_go_forward;
         private System.Windows.Forms.Label label3;
@@ -434,5 +436,6 @@
         private System.Windows.Forms.Label showBtn;
         private System.Windows.Forms.Panel panelLoading;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

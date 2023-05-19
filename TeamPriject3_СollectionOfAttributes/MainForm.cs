@@ -261,5 +261,15 @@ namespace TeamPriject3_СollectionOfAttributes
             profile.ShowDialog();
             UpdateAlbums();
         }
+
+        private void label_box1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_box3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
