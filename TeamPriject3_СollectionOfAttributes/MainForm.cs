@@ -264,7 +264,8 @@ namespace TeamPriject3_СollectionOfAttributes
 
         private void label_box1_Click(object sender, EventArgs e)
         {
-
+            Albums albums = new Albums(login);
+            albums.ShowDialog();
         }
 
         private void label_box3_Click(object sender, EventArgs e)
