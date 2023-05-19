@@ -210,7 +210,7 @@
             this.CreateNewAlbum_lable.AutoSize = true;
             this.CreateNewAlbum_lable.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CreateNewAlbum_lable.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.CreateNewAlbum_lable.Location = new System.Drawing.Point(33, 18);
+            this.CreateNewAlbum_lable.Location = new System.Drawing.Point(33, 9);
             this.CreateNewAlbum_lable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CreateNewAlbum_lable.Name = "CreateNewAlbum_lable";
             this.CreateNewAlbum_lable.Size = new System.Drawing.Size(504, 60);
