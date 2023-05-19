@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_new_Furnitures));
             this.CreateNewAlbum_lable = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.entered_link = new System.Windows.Forms.TextBox();
@@ -227,6 +228,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.CreateNewAlbum_lable);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.Name = "Add_new_Furnitures";
             this.Text = "Add_new_Furnitures";

@@ -12,18 +12,18 @@ using System.Windows.Forms;
 
 namespace TeamPriject3_СollectionOfAttributes
 {
-    public partial class Profile : Form
+    public partial class Профиль : Form
     {
         private string login;
         private string password;
         private string mail;
 
 
-        public Profile()
+        public Профиль()
         {
             InitializeComponent();
         }
-        public Profile(string login)
+        public Профиль(string login)
         {
             InitializeComponent();
             this.login = login;
@@ -64,8 +64,41 @@ namespace TeamPriject3_СollectionOfAttributes
             mail = list_email[0];
 
             label_login.Text = "Логин: " + login;
-            label1.Text = "Пароль: " + password;
             label2.Text = "Почта: " + mail;
+
+
+            DataBase db1 = new DataBase();
+            DataTable dataTable1 = new DataTable();
+
+            MySqlCommand command1 = new MySqlCommand("SELECT * FROM album WHERE  userlogin = @login", db1.GetConnection());
+            command1.Parameters.Add("@login", MySqlDbType.VarChar).Value = login;
+
+            MySqlDataAdapter adapter1 = new MySqlDataAdapter();
+
+            adapter1.SelectCommand = command1;
+
+            adapter1.Fill(dataTable1);
+
+            db1.OpenConnection();
+            DbDataReader reader1 = command1.ExecuteReader();
+
+
+            List<string> list = new List<string>();
+
+
+            while (reader1.Read())
+            {
+                list.Add(reader1[1].ToString());
+            }
+            int a = list.Count;
+            label3.Text = "Всего \nальбомов: " + a.ToString();
+            db1.CloseConnection();
+            
+
+
+
+
+
         }
 
         private void buttonEnter_Click(object sender, EventArgs e)
@@ -81,6 +114,11 @@ namespace TeamPriject3_СollectionOfAttributes
             }
             
             this.Close();
+        }
+
+        private void label_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

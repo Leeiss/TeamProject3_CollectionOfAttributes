@@ -39,10 +39,6 @@
             this.label_showprofile = new System.Windows.Forms.Label();
             this.label_albums = new System.Windows.Forms.Label();
             this.label_addalbums = new System.Windows.Forms.Label();
-            this.label_box1 = new System.Windows.Forms.Label();
-            this.label_box2 = new System.Windows.Forms.Label();
-            this.label_box3 = new System.Windows.Forms.Label();
-            this.label_box4 = new System.Windows.Forms.Label();
             this.label_name1 = new System.Windows.Forms.Label();
             this.label_name2 = new System.Windows.Forms.Label();
             this.label_name3 = new System.Windows.Forms.Label();
@@ -57,8 +53,10 @@
             this.panelLoading = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.label_box1 = new System.Windows.Forms.Label();
+            this.label_box2 = new System.Windows.Forms.Label();
+            this.label_box3 = new System.Windows.Forms.Label();
+            this.label_box4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_profile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ideasBtn)).BeginInit();
@@ -175,9 +173,10 @@
             // 
             this.label_box1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label_box1.Image = ((System.Drawing.Image)(resources.GetObject("label_box1.Image")));
-            this.label_box1.Location = new System.Drawing.Point(22, 361);
+            this.label_box1.Location = new System.Drawing.Point(29, 451);
+            this.label_box1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_box1.Name = "label_box1";
-            this.label_box1.Size = new System.Drawing.Size(45, 45);
+            this.label_box1.Size = new System.Drawing.Size(60, 56);
             this.label_box1.TabIndex = 19;
             this.label_box1.Click += new System.EventHandler(this.label_box1_Click);
             // 
@@ -185,18 +184,20 @@
             // 
             this.label_box2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label_box2.Image = ((System.Drawing.Image)(resources.GetObject("label_box2.Image")));
-            this.label_box2.Location = new System.Drawing.Point(21, 436);
+            this.label_box2.Location = new System.Drawing.Point(28, 545);
+            this.label_box2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_box2.Name = "label_box2";
-            this.label_box2.Size = new System.Drawing.Size(46, 45);
+            this.label_box2.Size = new System.Drawing.Size(61, 56);
             this.label_box2.TabIndex = 20;
             // 
             // label_box3
             // 
             this.label_box3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label_box3.Image = ((System.Drawing.Image)(resources.GetObject("label_box3.Image")));
-            this.label_box3.Location = new System.Drawing.Point(21, 512);
+            this.label_box3.Location = new System.Drawing.Point(28, 640);
+            this.label_box3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_box3.Name = "label_box3";
-            this.label_box3.Size = new System.Drawing.Size(46, 45);
+            this.label_box3.Size = new System.Drawing.Size(61, 56);
             this.label_box3.TabIndex = 21;
             this.label_box3.Click += new System.EventHandler(this.label_box3_Click);
             // 
@@ -204,9 +205,10 @@
             // 
             this.label_box4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label_box4.Image = ((System.Drawing.Image)(resources.GetObject("label_box4.Image")));
-            this.label_box4.Location = new System.Drawing.Point(21, 583);
+            this.label_box4.Location = new System.Drawing.Point(28, 729);
+            this.label_box4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_box4.Name = "label_box4";
-            this.label_box4.Size = new System.Drawing.Size(46, 45);
+            this.label_box4.Size = new System.Drawing.Size(61, 56);
             this.label_box4.TabIndex = 22;
             // 
             // label_name1
@@ -362,34 +364,12 @@
             this.pictureBox3.TabIndex = 30;
             this.pictureBox3.TabStop = false;
             // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel2.Location = new System.Drawing.Point(338, 48);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 673);
-            this.panel2.TabIndex = 9;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel3.Location = new System.Drawing.Point(-73, 214);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(411, 10);
-            this.panel3.TabIndex = 62;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1216, 721);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1621, 901);
             this.Controls.Add(this.label_go_forward);
             this.Controls.Add(this.panelLoading);
             this.Controls.Add(this.showBtn);
@@ -417,6 +397,7 @@
             this.Controls.Add(this.pictureBox_logo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "CREATIVE INTERIOR";
@@ -443,10 +424,6 @@
         private System.Windows.Forms.Label label_showprofile;
         private System.Windows.Forms.Label label_albums;
         private System.Windows.Forms.Label label_addalbums;
-        private System.Windows.Forms.Label label_box1;
-        private System.Windows.Forms.Label label_box2;
-        private System.Windows.Forms.Label label_box3;
-        private System.Windows.Forms.Label label_box4;
         private System.Windows.Forms.Label label_name1;
         private System.Windows.Forms.Label label_name2;
         private System.Windows.Forms.Label label_name3;
@@ -461,7 +438,5 @@
         private System.Windows.Forms.Panel panelLoading;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
     }
 }

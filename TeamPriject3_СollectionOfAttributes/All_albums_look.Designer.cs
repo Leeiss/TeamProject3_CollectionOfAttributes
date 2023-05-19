@@ -261,6 +261,7 @@
             this.Controls.Add(this.album_call);
             this.Controls.Add(this.CreateNewAlbum_lable);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimizeBox = false;
             this.Name = "All_albums_look";

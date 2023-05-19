@@ -51,26 +51,36 @@ namespace TeamPriject3_СollectionOfAttributes
 
                 int count = Convert.ToInt32(cmd.ExecuteScalar());
 
-                if (count > 0)
+
+                if (room_type != null)
                 {
-                    MessageBox.Show("Альбом с таким названием уже существует");
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Альбом с таким названием уже существует");
+                    }
+                    else
+                    {
+                        cmd = new MySqlCommand("INSERT INTO album (Album_name, userlogin, room_type) VALUES (@albumName, @userLogin, @roomType)", connection);
+                        cmd.Parameters.AddWithValue("@albumName", namealbum_textbox.Text);
+                        cmd.Parameters.AddWithValue("@userLogin", login);
+                        cmd.Parameters.AddWithValue("@roomType", room_type);
+
+                        cmd.ExecuteNonQuery();
+
+                        connection.Close();
+                        AddFurniture addFurniture = new AddFurniture(login, namealbum_textbox.Text, room_type);
+                        addFurniture.ShowDialog();
+                        MessageBox.Show("Альбом успешно создан");
+
+                        this.Close();
+                    }
                 }
                 else
                 {
-                    cmd = new MySqlCommand("INSERT INTO album (Album_name, userlogin, room_type) VALUES (@albumName, @userLogin, @roomType)", connection);
-                    cmd.Parameters.AddWithValue("@albumName", namealbum_textbox.Text);
-                    cmd.Parameters.AddWithValue("@userLogin", login);
-                    cmd.Parameters.AddWithValue("@roomType", room_type);
+                    MessageBox.Show("Вы не выбрали тип комнаты");
 
-                    cmd.ExecuteNonQuery();
-
-                    connection.Close();
-                    AddFurniture addFurniture = new AddFurniture(login, namealbum_textbox.Text, room_type);
-                    addFurniture.ShowDialog();
-                    MessageBox.Show("Альбом успешно создан");
-
-                    this.Close();
                 }
+
             }
             else
             {

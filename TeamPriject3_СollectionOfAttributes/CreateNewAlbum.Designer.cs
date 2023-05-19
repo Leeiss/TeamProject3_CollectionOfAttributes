@@ -245,6 +245,7 @@
             this.Controls.Add(this.namealbum_textbox);
             this.Controls.Add(this.namealbum_label);
             this.Controls.Add(this.CreateNewAlbum_lable);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CreateNewAlbum";
             this.Text = "Создание нового альбома";
             this.ResumeLayout(false);
