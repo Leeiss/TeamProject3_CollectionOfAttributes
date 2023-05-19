@@ -59,10 +59,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(98)))));
-            this.panel1.Location = new System.Drawing.Point(8, 71);
+            this.panel1.Location = new System.Drawing.Point(0, 71);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(545, 10);
+            this.panel1.Size = new System.Drawing.Size(586, 10);
             this.panel1.TabIndex = 63;
             // 
             // entered_link
@@ -134,10 +134,10 @@
             this.select_poster_btn.BackColor = System.Drawing.SystemColors.Control;
             this.select_poster_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.select_poster_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(122)))), ((int)(((byte)(121)))));
-            this.select_poster_btn.Location = new System.Drawing.Point(21, 525);
+            this.select_poster_btn.Location = new System.Drawing.Point(21, 540);
             this.select_poster_btn.Margin = new System.Windows.Forms.Padding(2);
             this.select_poster_btn.Name = "select_poster_btn";
-            this.select_poster_btn.Size = new System.Drawing.Size(183, 78);
+            this.select_poster_btn.Size = new System.Drawing.Size(183, 63);
             this.select_poster_btn.TabIndex = 75;
             this.select_poster_btn.Text = "Выбрать изображение";
             this.select_poster_btn.UseVisualStyleBackColor = false;
@@ -148,9 +148,9 @@
             this.buttonEnter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(98)))));
             this.buttonEnter.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEnter.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonEnter.Location = new System.Drawing.Point(319, 525);
+            this.buttonEnter.Location = new System.Drawing.Point(319, 540);
             this.buttonEnter.Name = "buttonEnter";
-            this.buttonEnter.Size = new System.Drawing.Size(234, 78);
+            this.buttonEnter.Size = new System.Drawing.Size(234, 63);
             this.buttonEnter.TabIndex = 76;
             this.buttonEnter.Text = "Добавить";
             this.buttonEnter.UseVisualStyleBackColor = false;
@@ -214,6 +214,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.CreateNewAlbum_lable);
             this.Controls.Add(this.panel1);
+            this.MinimizeBox = false;
             this.Name = "Add_new_Furnitures";
             this.Text = "Add_new_Furnitures";
             this.ResumeLayout(false);
