@@ -48,17 +48,19 @@
             // label_go_back
             // 
             this.label_go_back.Image = ((System.Drawing.Image)(resources.GetObject("label_go_back.Image")));
-            this.label_go_back.Location = new System.Drawing.Point(12, 410);
+            this.label_go_back.Location = new System.Drawing.Point(-7, 328);
+            this.label_go_back.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_go_back.Name = "label_go_back";
-            this.label_go_back.Size = new System.Drawing.Size(82, 75);
+            this.label_go_back.Size = new System.Drawing.Size(62, 60);
             this.label_go_back.TabIndex = 74;
             // 
             // label_go_forward
             // 
             this.label_go_forward.Image = ((System.Drawing.Image)(resources.GetObject("label_go_forward.Image")));
-            this.label_go_forward.Location = new System.Drawing.Point(579, 410);
+            this.label_go_forward.Location = new System.Drawing.Point(509, 330);
+            this.label_go_forward.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_go_forward.Name = "label_go_forward";
-            this.label_go_forward.Size = new System.Drawing.Size(89, 72);
+            this.label_go_forward.Size = new System.Drawing.Size(67, 58);
             this.label_go_forward.TabIndex = 73;
             // 
             // button1
@@ -66,9 +68,10 @@
             this.button1.BackColor = System.Drawing.SystemColors.Control;
             this.button1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(122)))), ((int)(((byte)(121)))));
-            this.button1.Location = new System.Drawing.Point(404, 714);
+            this.button1.Location = new System.Drawing.Point(309, 574);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 51);
+            this.button1.Size = new System.Drawing.Size(123, 56);
             this.button1.TabIndex = 72;
             this.button1.Text = "Отмена";
             this.button1.UseVisualStyleBackColor = false;
@@ -78,9 +81,10 @@
             this.buttonEnter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(98)))));
             this.buttonEnter.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEnter.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonEnter.Location = new System.Drawing.Point(539, 714);
+            this.buttonEnter.Location = new System.Drawing.Point(436, 574);
+            this.buttonEnter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonEnter.Name = "buttonEnter";
-            this.buttonEnter.Size = new System.Drawing.Size(129, 51);
+            this.buttonEnter.Size = new System.Drawing.Size(126, 56);
             this.buttonEnter.TabIndex = 71;
             this.buttonEnter.Text = "Добавить";
             this.buttonEnter.UseVisualStyleBackColor = false;
@@ -90,9 +94,10 @@
             this.button_name6.BackColor = System.Drawing.SystemColors.Control;
             this.button_name6.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_name6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(122)))), ((int)(((byte)(121)))));
-            this.button_name6.Location = new System.Drawing.Point(366, 532);
+            this.button_name6.Location = new System.Drawing.Point(296, 423);
+            this.button_name6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_name6.Name = "button_name6";
-            this.button_name6.Size = new System.Drawing.Size(232, 72);
+            this.button_name6.Size = new System.Drawing.Size(209, 80);
             this.button_name6.TabIndex = 70;
             this.button_name6.Text = "Войти";
             this.button_name6.UseVisualStyleBackColor = false;
@@ -102,9 +107,10 @@
             this.button_name5.BackColor = System.Drawing.SystemColors.Control;
             this.button_name5.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_name5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(122)))), ((int)(((byte)(121)))));
-            this.button_name5.Location = new System.Drawing.Point(366, 410);
+            this.button_name5.Location = new System.Drawing.Point(296, 219);
+            this.button_name5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_name5.Name = "button_name5";
-            this.button_name5.Size = new System.Drawing.Size(232, 75);
+            this.button_name5.Size = new System.Drawing.Size(209, 80);
             this.button_name5.TabIndex = 69;
             this.button_name5.Text = "Войти";
             this.button_name5.UseVisualStyleBackColor = false;
@@ -114,9 +120,10 @@
             this.button_name4.BackColor = System.Drawing.SystemColors.Control;
             this.button_name4.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_name4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(122)))), ((int)(((byte)(121)))));
-            this.button_name4.Location = new System.Drawing.Point(366, 299);
+            this.button_name4.Location = new System.Drawing.Point(296, 319);
+            this.button_name4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_name4.Name = "button_name4";
-            this.button_name4.Size = new System.Drawing.Size(232, 72);
+            this.button_name4.Size = new System.Drawing.Size(209, 80);
             this.button_name4.TabIndex = 68;
             this.button_name4.Text = "Войти";
             this.button_name4.UseVisualStyleBackColor = false;
@@ -126,9 +133,10 @@
             this.button_name3.BackColor = System.Drawing.SystemColors.Control;
             this.button_name3.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_name3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(122)))), ((int)(((byte)(121)))));
-            this.button_name3.Location = new System.Drawing.Point(82, 532);
+            this.button_name3.Location = new System.Drawing.Point(58, 423);
+            this.button_name3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_name3.Name = "button_name3";
-            this.button_name3.Size = new System.Drawing.Size(232, 72);
+            this.button_name3.Size = new System.Drawing.Size(209, 80);
             this.button_name3.TabIndex = 67;
             this.button_name3.Text = "Войти";
             this.button_name3.UseVisualStyleBackColor = false;
@@ -138,9 +146,10 @@
             this.button_name2.BackColor = System.Drawing.SystemColors.Control;
             this.button_name2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_name2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(122)))), ((int)(((byte)(121)))));
-            this.button_name2.Location = new System.Drawing.Point(82, 410);
+            this.button_name2.Location = new System.Drawing.Point(59, 319);
+            this.button_name2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_name2.Name = "button_name2";
-            this.button_name2.Size = new System.Drawing.Size(232, 72);
+            this.button_name2.Size = new System.Drawing.Size(208, 80);
             this.button_name2.TabIndex = 66;
             this.button_name2.Text = "Войти";
             this.button_name2.UseVisualStyleBackColor = false;
@@ -150,9 +159,10 @@
             this.button_name1.BackColor = System.Drawing.SystemColors.Control;
             this.button_name1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_name1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(122)))), ((int)(((byte)(121)))));
-            this.button_name1.Location = new System.Drawing.Point(82, 299);
+            this.button_name1.Location = new System.Drawing.Point(58, 219);
+            this.button_name1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_name1.Name = "button_name1";
-            this.button_name1.Size = new System.Drawing.Size(232, 72);
+            this.button_name1.Size = new System.Drawing.Size(208, 80);
             this.button_name1.TabIndex = 65;
             this.button_name1.Text = "Войти";
             this.button_name1.UseVisualStyleBackColor = false;
@@ -161,10 +171,11 @@
             // 
             this.entered_login.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.entered_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(122)))), ((int)(((byte)(121)))));
-            this.entered_login.Location = new System.Drawing.Point(21, 177);
+            this.entered_login.Location = new System.Drawing.Point(19, 154);
+            this.entered_login.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.entered_login.Multiline = true;
             this.entered_login.Name = "entered_login";
-            this.entered_login.Size = new System.Drawing.Size(647, 47);
+            this.entered_login.Size = new System.Drawing.Size(519, 44);
             this.entered_login.TabIndex = 64;
             this.entered_login.Text = "Искать в альбомах";
             // 
@@ -173,36 +184,41 @@
             this.album_call.AutoSize = true;
             this.album_call.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.album_call.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(122)))), ((int)(((byte)(121)))));
-            this.album_call.Location = new System.Drawing.Point(21, 113);
+            this.album_call.Location = new System.Drawing.Point(12, 104);
+            this.album_call.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.album_call.Name = "album_call";
             this.album_call.Size = new System.Drawing.Size(376, 37);
             this.album_call.TabIndex = 63;
             this.album_call.Text = "Всего альбомов: name";
+            this.album_call.Click += new System.EventHandler(this.album_call_Click);
             // 
             // CreateNewAlbum_lable
             // 
             this.CreateNewAlbum_lable.AutoSize = true;
             this.CreateNewAlbum_lable.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CreateNewAlbum_lable.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.CreateNewAlbum_lable.Location = new System.Drawing.Point(83, 21);
+            this.CreateNewAlbum_lable.Location = new System.Drawing.Point(53, 27);
+            this.CreateNewAlbum_lable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CreateNewAlbum_lable.Name = "CreateNewAlbum_lable";
             this.CreateNewAlbum_lable.Size = new System.Drawing.Size(499, 51);
             this.CreateNewAlbum_lable.TabIndex = 62;
             this.CreateNewAlbum_lable.Text = "Альбомы ваших идей";
+            this.CreateNewAlbum_lable.Click += new System.EventHandler(this.CreateNewAlbum_lable_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(98)))));
-            this.panel1.Location = new System.Drawing.Point(21, 75);
+            this.panel1.Location = new System.Drawing.Point(19, 80);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(647, 10);
+            this.panel1.Size = new System.Drawing.Size(543, 10);
             this.panel1.TabIndex = 61;
             // 
             // Album_look
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(677, 777);
+            this.ClientSize = new System.Drawing.Size(573, 641);
             this.Controls.Add(this.label_go_back);
             this.Controls.Add(this.label_go_forward);
             this.Controls.Add(this.button1);
@@ -217,6 +233,7 @@
             this.Controls.Add(this.album_call);
             this.Controls.Add(this.CreateNewAlbum_lable);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Album_look";
             this.Text = "Album_look";
             this.ResumeLayout(false);

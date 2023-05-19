@@ -16,5 +16,15 @@ namespace TeamPriject3_СollectionOfAttributes
         {
             InitializeComponent();
         }
+
+        private void CreateNewAlbum_lable_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void album_call_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
