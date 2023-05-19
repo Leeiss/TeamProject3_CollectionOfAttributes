@@ -247,10 +247,16 @@ namespace TeamPriject3_СollectionOfAttributes
                         MessageBox.Show("Вы уже добавляли это фото");
                         return;
                     }
+                    try{
+                        command.CommandText = "INSERT INTO ideas (login, picturepath) VALUES (@login, @picturepath)";
+                        int numRowsAffected = command.ExecuteNonQuery();
+                        MessageBox.Show("Пример оформления комнаты добавлен в ваши сохраненные");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Подключите впн");
 
-                    command.CommandText = "INSERT INTO ideas (login, picturepath) VALUES (@login, @picturepath)";
-                    int numRowsAffected = command.ExecuteNonQuery();
-                    MessageBox.Show("Пример оформления комнаты добавлен в ваши сохраненные");
+                    }
                 }
             }
         }

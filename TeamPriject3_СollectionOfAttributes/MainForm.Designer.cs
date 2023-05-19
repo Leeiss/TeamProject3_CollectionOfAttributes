@@ -57,6 +57,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_profile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ideasBtn)).BeginInit();
@@ -295,7 +297,7 @@
             this.panelLoading.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panelLoading.Controls.Add(this.label4);
             this.panelLoading.Location = new System.Drawing.Point(530, 110);
-            this.panelLoading.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLoading.Margin = new System.Windows.Forms.Padding(2);
             this.panelLoading.Name = "panelLoading";
             this.panelLoading.Size = new System.Drawing.Size(610, 537);
             this.panelLoading.TabIndex = 61;
@@ -358,12 +360,34 @@
             this.label7.Size = new System.Drawing.Size(45, 45);
             this.label7.TabIndex = 65;
             // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel3.Location = new System.Drawing.Point(-2, 217);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(411, 10);
+            this.panel3.TabIndex = 67;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel2.Location = new System.Drawing.Point(409, 51);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(10, 673);
+            this.panel2.TabIndex = 66;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1216, 721);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -435,5 +459,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
     }
 }
