@@ -40,36 +40,44 @@ namespace TeamPriject3_СollectionOfAttributes
 
         private void create_button_Click(object sender, EventArgs e)
         {
-            MySqlConnection connection = new MySqlConnection(connectionString);
-            connection.Open();
-
-            MySqlCommand cmd = new MySqlCommand("SELECT COUNT(*) FROM album WHERE Album_name = @albumName AND userlogin = @userLogin", connection);
-            cmd.Parameters.AddWithValue("@albumName", namealbum_textbox.Text);
-            cmd.Parameters.AddWithValue("@userLogin", login);
-
-            int count = Convert.ToInt32(cmd.ExecuteScalar());
-
-            if (count > 0)
+            if (namealbum_textbox.Text != "")
             {
-                MessageBox.Show("Альбом с таким названием уже существует");
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                connection.Open();
+
+                MySqlCommand cmd = new MySqlCommand("SELECT COUNT(*) FROM album WHERE Album_name = @albumName AND userlogin = @userLogin", connection);
+                cmd.Parameters.AddWithValue("@albumName", namealbum_textbox.Text);
+                cmd.Parameters.AddWithValue("@userLogin", login);
+
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+
+                if (count > 0)
+                {
+                    MessageBox.Show("Альбом с таким названием уже существует");
+                }
+                else
+                {
+                    cmd = new MySqlCommand("INSERT INTO album (Album_name, userlogin, room_type) VALUES (@albumName, @userLogin, @roomType)", connection);
+                    cmd.Parameters.AddWithValue("@albumName", namealbum_textbox.Text);
+                    cmd.Parameters.AddWithValue("@userLogin", login);
+                    cmd.Parameters.AddWithValue("@roomType", room_type);
+
+                    cmd.ExecuteNonQuery();
+
+                    connection.Close();
+                    AddFurniture addFurniture = new AddFurniture(login, namealbum_textbox.Text, room_type);
+                    addFurniture.ShowDialog();
+                    MessageBox.Show("Альбом успешно создан");
+
+                    this.Close();
+                }
             }
             else
             {
-                cmd = new MySqlCommand("INSERT INTO album (Album_name, userlogin, room_type) VALUES (@albumName, @userLogin, @roomType)", connection);
-                cmd.Parameters.AddWithValue("@albumName", namealbum_textbox.Text);
-                cmd.Parameters.AddWithValue("@userLogin", login);
-                cmd.Parameters.AddWithValue("@roomType", room_type);
+                MessageBox.Show("Вы не ввели название альбома!");
 
-                cmd.ExecuteNonQuery();
+            }
 
-                connection.Close();
-                AddFurniture addFurniture = new AddFurniture(login, namealbum_textbox.Text, room_type);
-                addFurniture.ShowDialog();
-                MessageBox.Show("Альбом успешно создан");
-
-                this.Close();
-            }    
-            
 
         }
 
