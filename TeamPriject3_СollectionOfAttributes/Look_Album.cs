@@ -461,5 +461,10 @@ namespace TeamPriject3_СollectionOfAttributes
                 delete_mod= false;
             }
         }
+
+        private void label_login_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
