@@ -124,7 +124,7 @@
             // 
             this.label_name1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_name1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_name1.Location = new System.Drawing.Point(19, 196);
+            this.label_name1.Location = new System.Drawing.Point(19, 203);
             this.label_name1.Name = "label_name1";
             this.label_name1.Size = new System.Drawing.Size(193, 33);
             this.label_name1.TabIndex = 25;
@@ -135,7 +135,7 @@
             // 
             this.label_name4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_name4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_name4.Location = new System.Drawing.Point(630, 196);
+            this.label_name4.Location = new System.Drawing.Point(630, 203);
             this.label_name4.Name = "label_name4";
             this.label_name4.Size = new System.Drawing.Size(197, 33);
             this.label_name4.TabIndex = 26;
@@ -146,7 +146,7 @@
             // 
             this.label_name3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_name3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_name3.Location = new System.Drawing.Point(428, 196);
+            this.label_name3.Location = new System.Drawing.Point(428, 203);
             this.label_name3.Name = "label_name3";
             this.label_name3.Size = new System.Drawing.Size(196, 33);
             this.label_name3.TabIndex = 27;
@@ -157,7 +157,7 @@
             // 
             this.label_name2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_name2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_name2.Location = new System.Drawing.Point(231, 196);
+            this.label_name2.Location = new System.Drawing.Point(231, 203);
             this.label_name2.Name = "label_name2";
             this.label_name2.Size = new System.Drawing.Size(191, 33);
             this.label_name2.TabIndex = 28;
@@ -168,7 +168,7 @@
             // 
             this.label_name5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_name5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_name5.Location = new System.Drawing.Point(833, 196);
+            this.label_name5.Location = new System.Drawing.Point(833, 203);
             this.label_name5.Name = "label_name5";
             this.label_name5.Size = new System.Drawing.Size(192, 33);
             this.label_name5.TabIndex = 29;
@@ -179,7 +179,7 @@
             // 
             this.label_name6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_name6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_name6.Location = new System.Drawing.Point(1031, 196);
+            this.label_name6.Location = new System.Drawing.Point(1031, 203);
             this.label_name6.Name = "label_name6";
             this.label_name6.Size = new System.Drawing.Size(206, 33);
             this.label_name6.TabIndex = 30;
@@ -265,7 +265,7 @@
             this.buttonEnter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(98)))));
             this.buttonEnter.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEnter.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonEnter.Location = new System.Drawing.Point(879, 663);
+            this.buttonEnter.Location = new System.Drawing.Point(884, 653);
             this.buttonEnter.Name = "buttonEnter";
             this.buttonEnter.Size = new System.Drawing.Size(353, 46);
             this.buttonEnter.TabIndex = 39;
@@ -277,17 +277,18 @@
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(665, 147);
+            this.label1.Location = new System.Drawing.Point(665, 133);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(167, 49);
             this.label1.TabIndex = 40;
             this.label1.Text = "Фильтры:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // combo_color
             // 
             this.combo_color.FormattingEnabled = true;
-            this.combo_color.Location = new System.Drawing.Point(787, 162);
+            this.combo_color.Location = new System.Drawing.Point(787, 148);
             this.combo_color.Name = "combo_color";
             this.combo_color.Size = new System.Drawing.Size(145, 28);
             this.combo_color.TabIndex = 41;
@@ -295,7 +296,7 @@
             // combo_style
             // 
             this.combo_style.FormattingEnabled = true;
-            this.combo_style.Location = new System.Drawing.Point(939, 162);
+            this.combo_style.Location = new System.Drawing.Point(939, 148);
             this.combo_style.Name = "combo_style";
             this.combo_style.Size = new System.Drawing.Size(137, 28);
             this.combo_style.TabIndex = 42;
@@ -307,10 +308,10 @@
             this.button_search.BackgroundImage = global::TeamPriject3_СollectionOfAttributes.Properties.Resources.chrome_FH2QILFUPE;
             this.button_search.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(122)))), ((int)(((byte)(121)))));
-            this.button_search.Location = new System.Drawing.Point(1081, 153);
+            this.button_search.Location = new System.Drawing.Point(1081, 143);
             this.button_search.Margin = new System.Windows.Forms.Padding(2);
             this.button_search.Name = "button_search";
-            this.button_search.Size = new System.Drawing.Size(35, 43);
+            this.button_search.Size = new System.Drawing.Size(30, 34);
             this.button_search.TabIndex = 76;
             this.button_search.UseVisualStyleBackColor = false;
             this.button_search.Click += new System.EventHandler(this.button_search_Click);
@@ -319,7 +320,7 @@
             // 
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(791, 122);
+            this.label2.Location = new System.Drawing.Point(782, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 37);
             this.label2.TabIndex = 77;
@@ -330,7 +331,7 @@
             // 
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(952, 122);
+            this.label3.Location = new System.Drawing.Point(934, 109);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 37);
             this.label3.TabIndex = 78;
@@ -342,7 +343,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1276, 712);
+            this.ClientSize = new System.Drawing.Size(1276, 726);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button_search);
@@ -369,6 +370,7 @@
             this.Controls.Add(this.label_album);
             this.Controls.Add(this.pictureBox_logo);
             this.Controls.Add(this.picturebox_profile);
+            this.MaximizeBox = false;
             this.Name = "AddFurniture";
             this.Text = "Редактирование альбома";
             this.Load += new System.EventHandler(this.AddFurniture_Load);
