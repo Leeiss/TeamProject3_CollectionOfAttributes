@@ -16,5 +16,10 @@ namespace TeamPriject3_СollectionOfAttributes
         {
             InitializeComponent();
         }
+
+        private void genres_list_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
