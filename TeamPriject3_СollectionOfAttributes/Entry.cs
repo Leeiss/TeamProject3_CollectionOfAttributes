@@ -64,5 +64,10 @@ namespace TeamPriject3_СollectionOfAttributes
         {
 
         }
+
+        private void Entry_Load(object sender, EventArgs e)
+        {
+            entered_password.PasswordChar = '*';
+        }
     }
 }

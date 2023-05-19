@@ -119,6 +119,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Entry";
             this.Text = "Вход";
+            this.Load += new System.EventHandler(this.Entry_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
