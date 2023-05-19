@@ -95,11 +95,11 @@
     <Compile Include="AddFurniture.Designer.cs">
       <DependentUpon>AddFurniture.cs</DependentUpon>
     </Compile>
-    <Compile Include="Album_look.cs">
+    <Compile Include="All_albums_look.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Album_look.Designer.cs">
-      <DependentUpon>Album_look.cs</DependentUpon>
+    <Compile Include="All_albums_look.Designer.cs">
+      <DependentUpon>All_albums_look.cs</DependentUpon>
     </Compile>
     <Compile Include="CreateNewAlbum.cs">
       <SubType>Form</SubType>
@@ -161,8 +161,8 @@
     <EmbeddedResource Include="AddFurniture.resx">
       <DependentUpon>AddFurniture.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Album_look.resx">
-      <DependentUpon>Album_look.cs</DependentUpon>
+    <EmbeddedResource Include="All_albums_look.resx">
+      <DependentUpon>All_albums_look.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateNewAlbum.resx">
       <DependentUpon>CreateNewAlbum.cs</DependentUpon>
