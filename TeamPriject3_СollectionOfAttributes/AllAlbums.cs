@@ -16,5 +16,20 @@ namespace TeamPriject3_СollectionOfAttributes
         {
             InitializeComponent();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void entered_login_TextChanged(object sender, EventArgs e)
+        {
+            entered_login.Text = "";
+        }
+
+        private void AllAlbums_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

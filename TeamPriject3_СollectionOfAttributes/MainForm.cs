@@ -210,5 +210,12 @@ namespace TeamPriject3_СollectionOfAttributes
             UserIdeas userIdeas = new UserIdeas(login);
             userIdeas.ShowDialog();
         }
+
+        private void label_addalbums_Click(object sender, EventArgs e)
+        {
+            CreateNewAlbum createNewAlbum = new CreateNewAlbum(login);
+            createNewAlbum.ShowDialog();
+            UpdateAlbums();
+        }
     }
 }

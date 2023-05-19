@@ -308,6 +308,7 @@ namespace TeamPriject3_СollectionOfAttributes
         {
             AddFurniture addFurniture = new AddFurniture(login, album_name, room_type);
             addFurniture.ShowDialog();
+            ShowPhotos();
         }
 
 
