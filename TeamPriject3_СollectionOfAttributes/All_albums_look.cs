@@ -64,7 +64,6 @@ namespace TeamPriject3_СollectionOfAttributes
         private void Album_look_Load(object sender, EventArgs e)
         {
             ShowNames();
-            album_call.Text = "Всего альбомов: " + call_album.ToString();
         }
 
 
@@ -107,7 +106,7 @@ namespace TeamPriject3_СollectionOfAttributes
 
             int c = a - str * 6;
 
-
+            album_call.Text = "Всего альбомов: " + call_album.ToString();
             switch (c)
             {
                 case 0:
@@ -196,6 +195,7 @@ namespace TeamPriject3_СollectionOfAttributes
             {
                 Look_Album look_Album = new Look_Album(button_name1.Text, login);
                 look_Album.ShowDialog();
+                ShowNames();
             }
         }
 
@@ -205,6 +205,7 @@ namespace TeamPriject3_СollectionOfAttributes
             {
                 Look_Album look_Album = new Look_Album(button_name2.Text, login);
                 look_Album.ShowDialog();
+                ShowNames();
             }
         }
 
@@ -214,6 +215,7 @@ namespace TeamPriject3_СollectionOfAttributes
             {
                 Look_Album look_Album = new Look_Album(button_name3.Text, login);
                 look_Album.ShowDialog();
+                ShowNames();
             }
         }
 
@@ -223,6 +225,7 @@ namespace TeamPriject3_СollectionOfAttributes
             {
                 Look_Album look_Album = new Look_Album(button_name4.Text, login);
                 look_Album.ShowDialog();
+                ShowNames();
             }
         }
         private void button_name5_Click(object sender, EventArgs e)
@@ -231,6 +234,7 @@ namespace TeamPriject3_СollectionOfAttributes
             {
                 Look_Album look_Album = new Look_Album(button_name5.Text, login);
                 look_Album.ShowDialog();
+                ShowNames();
             }
         }
 
@@ -240,6 +244,7 @@ namespace TeamPriject3_СollectionOfAttributes
             {
                 Look_Album look_Album = new Look_Album(button_name6.Text, login);
                 look_Album.ShowDialog();
+                ShowNames();
             }
         }
     }

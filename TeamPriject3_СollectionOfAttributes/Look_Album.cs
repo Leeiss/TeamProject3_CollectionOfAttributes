@@ -83,8 +83,11 @@ namespace TeamPriject3_СollectionOfAttributes
 
                 }
 
+
                 db.CloseConnection();
             }
+
+            
 
             int a = listpath.Count;
             call_photos = a;
@@ -206,6 +209,35 @@ namespace TeamPriject3_СollectionOfAttributes
                     pictureBox6.Name = listId_furnitures[str * 6 + 5];
                     break;
             }
+
+
+            if(a == 0)
+            {
+                MessageBox.Show("Этот альбом пустой");
+
+
+                DataBase db1 = new DataBase();
+                db1.OpenConnection();
+                MySqlCommand command1 = new MySqlCommand("DELETE FROM album WHERE  userlogin = @login AND Album_name = @album", db1.GetConnection()); // создаем объект и передаем команду для вытягивания из бд логина и пароля из бд
+                command1.Parameters.Add("@login", MySqlDbType.VarChar).Value = login;
+                command1.Parameters.Add("@album", MySqlDbType.VarChar).Value = album_name;
+
+                command1.ExecuteNonQuery();
+                MessageBox.Show("Альбом удален");
+                db1.CloseConnection();
+                this.Close();
+
+
+
+
+            }
+
+
+
+
+
+
+
         }
 
 

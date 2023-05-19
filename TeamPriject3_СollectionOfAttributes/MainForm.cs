@@ -171,6 +171,7 @@ namespace TeamPriject3_СollectionOfAttributes
             {
                 Look_Album look_Album = new Look_Album(label_name1.Text, login);
                 look_Album.ShowDialog();
+                UpdateAlbums();
             }
             
 
@@ -183,6 +184,7 @@ namespace TeamPriject3_СollectionOfAttributes
             {
                 Look_Album look_Album = new Look_Album(label_name2.Text, login);
                 look_Album.ShowDialog();
+                UpdateAlbums();
             }
         }
 
@@ -192,6 +194,7 @@ namespace TeamPriject3_СollectionOfAttributes
             {
                 Look_Album look_Album = new Look_Album(label_name3.Text, login);
                 look_Album.ShowDialog();
+                UpdateAlbums();
             }
         }
 
@@ -201,6 +204,7 @@ namespace TeamPriject3_СollectionOfAttributes
             {
                 Look_Album look_Album = new Look_Album(label_name4.Text, login);
                 look_Album.ShowDialog();
+                UpdateAlbums();
             }
         }
 
@@ -209,6 +213,7 @@ namespace TeamPriject3_СollectionOfAttributes
         {
             UserIdeas userIdeas = new UserIdeas(login);
             userIdeas.ShowDialog();
+            UpdateAlbums();
         }
 
         private void label_addalbums_Click(object sender, EventArgs e)
