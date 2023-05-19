@@ -254,5 +254,12 @@ namespace TeamPriject3_СollectionOfAttributes
                 }
             }
         }
+
+        private void label_showprofile_Click(object sender, EventArgs e)
+        {
+            Profile profile = new Profile(login);
+            profile.ShowDialog();
+            UpdateAlbums();
+        }
     }
 }

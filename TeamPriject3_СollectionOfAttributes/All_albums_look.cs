@@ -107,6 +107,8 @@ namespace TeamPriject3_СollectionOfAttributes
             int c = a - str * 6;
 
             album_call.Text = "Всего альбомов: " + call_album.ToString();
+
+
             switch (c)
             {
                 case 0:
@@ -172,6 +174,80 @@ namespace TeamPriject3_СollectionOfAttributes
                     button_name6.Text = list[str * 6 + 5];
                     break;
             }
+
+            if (entered_login.Text != "")
+            {
+                if (button_name1.Text.Contains(entered_login.Text))
+                {
+                    button_name1.BackColor = Color.MediumAquamarine;
+                }
+                else
+                {
+                    button_name1.BackColor = Color.WhiteSmoke;
+                }
+
+
+
+                if (button_name2.Text.Contains(entered_login.Text))
+                {
+                    button_name2.BackColor = Color.MediumAquamarine;
+                }
+                else
+                {
+                    button_name2.BackColor = Color.WhiteSmoke;
+                }
+
+
+                if (button_name3.Text.Contains(entered_login.Text))
+                {
+                    button_name3.BackColor = Color.MediumAquamarine;
+                }
+                else
+                {
+                    button_name3.BackColor = Color.WhiteSmoke;
+                }
+
+
+                if (button_name4.Text.Contains(entered_login.Text))
+                {
+                    button_name4.BackColor = Color.MediumAquamarine;
+                }
+                else
+                {
+                    button_name4.BackColor = Color.WhiteSmoke;
+                }
+
+
+
+                if (button_name5.Text.Contains(entered_login.Text))
+                {
+                    button_name5.BackColor = Color.MediumAquamarine;
+                }
+                else
+                {
+                    button_name5.BackColor = Color.WhiteSmoke;
+                }
+
+
+                if (button_name6.Text.Contains(entered_login.Text))
+                {
+                    button_name6.BackColor = Color.MediumAquamarine;
+                }
+                else
+                {
+                    button_name6.BackColor = Color.WhiteSmoke;
+                }
+            } else
+            {
+                button_name1.BackColor = Color.WhiteSmoke;
+                button_name2.BackColor = Color.WhiteSmoke;
+                button_name3.BackColor = Color.WhiteSmoke;
+                button_name4.BackColor = Color.WhiteSmoke;
+                button_name5.BackColor = Color.WhiteSmoke;
+                button_name6.BackColor = Color.WhiteSmoke;
+
+            }
+
         }
 
         private void label_go_forward_Click(object sender, EventArgs e)
@@ -246,6 +322,18 @@ namespace TeamPriject3_СollectionOfAttributes
                 look_Album.ShowDialog();
                 ShowNames();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ShowNames();
+        }
+
+
+
+        private void entered_login_MouseClick(object sender, MouseEventArgs e)
+        {
+            entered_login.Clear();
         }
     }
 }

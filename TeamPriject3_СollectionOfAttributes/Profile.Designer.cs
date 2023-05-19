@@ -105,6 +105,7 @@
             this.buttonEnter.TabIndex = 72;
             this.buttonEnter.Text = "Добавить предмет";
             this.buttonEnter.UseVisualStyleBackColor = false;
+            this.buttonEnter.Click += new System.EventHandler(this.buttonEnter_Click);
             // 
             // Profile
             // 
@@ -119,6 +120,7 @@
             this.Controls.Add(this.label);
             this.Name = "Profile";
             this.Text = "Profile";
+            this.Load += new System.EventHandler(this.Profile_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

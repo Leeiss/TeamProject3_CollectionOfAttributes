@@ -43,6 +43,7 @@
             this.album_call = new System.Windows.Forms.Label();
             this.CreateNewAlbum_lable = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label_go_back
@@ -95,7 +96,7 @@
             // 
             // button_name6
             // 
-            this.button_name6.BackColor = System.Drawing.SystemColors.Control;
+            this.button_name6.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button_name6.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_name6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(122)))), ((int)(((byte)(121)))));
             this.button_name6.Location = new System.Drawing.Point(296, 423);
@@ -109,7 +110,7 @@
             // 
             // button_name5
             // 
-            this.button_name5.BackColor = System.Drawing.SystemColors.Control;
+            this.button_name5.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button_name5.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_name5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(122)))), ((int)(((byte)(121)))));
             this.button_name5.Location = new System.Drawing.Point(296, 319);
@@ -123,7 +124,7 @@
             // 
             // button_name4
             // 
-            this.button_name4.BackColor = System.Drawing.SystemColors.Control;
+            this.button_name4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button_name4.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_name4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(122)))), ((int)(((byte)(121)))));
             this.button_name4.Location = new System.Drawing.Point(296, 219);
@@ -137,7 +138,7 @@
             // 
             // button_name3
             // 
-            this.button_name3.BackColor = System.Drawing.SystemColors.Control;
+            this.button_name3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button_name3.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_name3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(122)))), ((int)(((byte)(121)))));
             this.button_name3.Location = new System.Drawing.Point(58, 423);
@@ -151,7 +152,7 @@
             // 
             // button_name2
             // 
-            this.button_name2.BackColor = System.Drawing.SystemColors.Control;
+            this.button_name2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button_name2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_name2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(122)))), ((int)(((byte)(121)))));
             this.button_name2.Location = new System.Drawing.Point(59, 319);
@@ -165,7 +166,7 @@
             // 
             // button_name1
             // 
-            this.button_name1.BackColor = System.Drawing.SystemColors.Control;
+            this.button_name1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button_name1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_name1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(122)))), ((int)(((byte)(121)))));
             this.button_name1.Location = new System.Drawing.Point(58, 219);
@@ -185,9 +186,10 @@
             this.entered_login.Margin = new System.Windows.Forms.Padding(2);
             this.entered_login.Multiline = true;
             this.entered_login.Name = "entered_login";
-            this.entered_login.Size = new System.Drawing.Size(519, 44);
+            this.entered_login.Size = new System.Drawing.Size(474, 44);
             this.entered_login.TabIndex = 64;
             this.entered_login.Text = "Искать в альбомах";
+            this.entered_login.MouseClick += new System.Windows.Forms.MouseEventHandler(this.entered_login_MouseClick);
             this.entered_login.TextChanged += new System.EventHandler(this.entered_login_TextChanged);
             // 
             // album_call
@@ -225,11 +227,26 @@
             this.panel1.Size = new System.Drawing.Size(543, 10);
             this.panel1.TabIndex = 61;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.Control;
+            this.button2.BackgroundImage = global::TeamPriject3_СollectionOfAttributes.Properties.Resources.chrome_FH2QILFUPE;
+            this.button2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(122)))), ((int)(((byte)(121)))));
+            this.button2.Location = new System.Drawing.Point(497, 154);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(52, 55);
+            this.button2.TabIndex = 75;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // All_albums_look
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(573, 641);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label_go_back);
             this.Controls.Add(this.label_go_forward);
             this.Controls.Add(this.button1);
@@ -269,5 +286,6 @@
         private System.Windows.Forms.Label album_call;
         private System.Windows.Forms.Label CreateNewAlbum_lable;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button2;
     }
 }

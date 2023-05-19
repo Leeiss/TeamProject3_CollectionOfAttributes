@@ -48,7 +48,7 @@ namespace TeamPriject3_СollectionOfAttributes
 
                 MainForm mainForm = new MainForm(loginUser);
                 mainForm.ShowDialog();
-
+                this.Close();
 
 
             }

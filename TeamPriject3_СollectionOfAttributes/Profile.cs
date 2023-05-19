@@ -1,7 +1,9 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,12 +24,54 @@ namespace TeamPriject3_СollectionOfAttributes
         {
             InitializeComponent();
         }
-        public Profile(string login, string password, string mail)
+        public Profile(string login)
         {
             InitializeComponent();
             this.login = login;
-            this.password = password;
-            this.mail = mail;
+        }
+
+        private void Profile_Load(object sender, EventArgs e)
+        {
+            
+
+
+            DataBase db = new DataBase();
+            DataTable dataTable = new DataTable();
+
+            MySqlCommand command = new MySqlCommand("SELECT * FROM users WHERE  login = @login", db.GetConnection());
+            command.Parameters.Add("@login", MySqlDbType.VarChar).Value = login;
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            adapter.SelectCommand = command;
+
+            adapter.Fill(dataTable);
+
+            db.OpenConnection();
+
+            DbDataReader reader = command.ExecuteReader();
+
+
+            List<string> list_password = new List<string>();
+            List<string> list_email = new List<string>();
+
+            while (reader.Read())
+            {
+                list_password.Add(reader[1].ToString());
+                list_email.Add(reader[3].ToString());
+            }
+            db.CloseConnection();
+            password = list_password[0];
+            mail = list_email[0];
+
+            label_login.Text = "Логин: " + login;
+            label1.Text = "Пароль: " + password;
+            label2.Text = "Почта: " + mail;
+        }
+
+        private void buttonEnter_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

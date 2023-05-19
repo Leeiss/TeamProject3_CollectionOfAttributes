@@ -21,6 +21,7 @@ namespace TeamPriject3_СollectionOfAttributes
         {
             Registration userRegist = new Registration();
             userRegist.Show();
+
         }
 
 
@@ -28,6 +29,7 @@ namespace TeamPriject3_СollectionOfAttributes
         {
             Entry userLogin = new Entry();
             userLogin.Show();
+
         }
 
 

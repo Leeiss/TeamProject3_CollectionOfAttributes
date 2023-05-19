@@ -29,6 +29,7 @@ namespace TeamPriject3_СollectionOfAttributes
             {
                 MainForm mainForm = new MainForm(codeUser);
                 mainForm.ShowDialog();
+                this.Close();
             }
             else
             {
