@@ -19,7 +19,6 @@ namespace TeamPriject3_СollectionOfAttributes
         private string mail;
 
 
-
         public Profile()
         {
             InitializeComponent();
@@ -71,6 +70,16 @@ namespace TeamPriject3_СollectionOfAttributes
 
         private void buttonEnter_Click(object sender, EventArgs e)
         {
+            if (login == "1" && password == "1")
+            {
+                Add_new_Furnitures add_New_Furnitures = new Add_new_Furnitures();
+                add_New_Furnitures.ShowDialog();
+
+            }else
+            {
+                MessageBox.Show("Вы не администратор!");
+            }
+            
             this.Close();
         }
     }
