@@ -49,6 +49,12 @@
             this.label_go_back = new System.Windows.Forms.Label();
             this.label_go_forward = new System.Windows.Forms.Label();
             this.buttonEnter = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.combo_color = new System.Windows.Forms.ComboBox();
+            this.combo_style = new System.Windows.Forms.ComboBox();
+            this.button_search = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_profile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -108,7 +114,7 @@
             this.label_album.ForeColor = System.Drawing.Color.Gray;
             this.label_album.Location = new System.Drawing.Point(16, 122);
             this.label_album.Name = "label_album";
-            this.label_album.Size = new System.Drawing.Size(1095, 60);
+            this.label_album.Size = new System.Drawing.Size(643, 60);
             this.label_album.TabIndex = 17;
             this.label_album.Text = "name - фото дизайна интерьера";
             this.label_album.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -200,7 +206,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(498, 480);
+            this.pictureBox3.Location = new System.Drawing.Point(38, 480);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(293, 167);
             this.pictureBox3.TabIndex = 33;
@@ -209,7 +215,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(35, 480);
+            this.pictureBox4.Location = new System.Drawing.Point(497, 480);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(294, 167);
             this.pictureBox4.TabIndex = 34;
@@ -267,12 +273,82 @@
             this.buttonEnter.UseVisualStyleBackColor = false;
             this.buttonEnter.Click += new System.EventHandler(this.buttonEnter_Click);
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.Gray;
+            this.label1.Location = new System.Drawing.Point(665, 147);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 49);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "Фильтры:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // combo_color
+            // 
+            this.combo_color.FormattingEnabled = true;
+            this.combo_color.Location = new System.Drawing.Point(787, 162);
+            this.combo_color.Name = "combo_color";
+            this.combo_color.Size = new System.Drawing.Size(145, 28);
+            this.combo_color.TabIndex = 41;
+            // 
+            // combo_style
+            // 
+            this.combo_style.FormattingEnabled = true;
+            this.combo_style.Location = new System.Drawing.Point(939, 162);
+            this.combo_style.Name = "combo_style";
+            this.combo_style.Size = new System.Drawing.Size(137, 28);
+            this.combo_style.TabIndex = 42;
+            this.combo_style.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // button_search
+            // 
+            this.button_search.BackColor = System.Drawing.SystemColors.Control;
+            this.button_search.BackgroundImage = global::TeamPriject3_СollectionOfAttributes.Properties.Resources.chrome_FH2QILFUPE;
+            this.button_search.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(122)))), ((int)(((byte)(121)))));
+            this.button_search.Location = new System.Drawing.Point(1081, 153);
+            this.button_search.Margin = new System.Windows.Forms.Padding(2);
+            this.button_search.Name = "button_search";
+            this.button_search.Size = new System.Drawing.Size(35, 43);
+            this.button_search.TabIndex = 76;
+            this.button_search.UseVisualStyleBackColor = false;
+            this.button_search.Click += new System.EventHandler(this.button_search_Click);
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.Location = new System.Drawing.Point(791, 122);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 37);
+            this.label2.TabIndex = 77;
+            this.label2.Text = "Цвет";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.Gray;
+            this.label3.Location = new System.Drawing.Point(952, 122);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 37);
+            this.label3.TabIndex = 78;
+            this.label3.Text = "Стиль";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // AddFurniture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1276, 712);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button_search);
+            this.Controls.Add(this.combo_style);
+            this.Controls.Add(this.combo_color);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonEnter);
             this.Controls.Add(this.label_go_forward);
             this.Controls.Add(this.label_go_back);
@@ -330,5 +406,11 @@
         private System.Windows.Forms.Label label_go_back;
         private System.Windows.Forms.Label label_go_forward;
         private System.Windows.Forms.Button buttonEnter;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox combo_color;
+        private System.Windows.Forms.ComboBox combo_style;
+        private System.Windows.Forms.Button button_search;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

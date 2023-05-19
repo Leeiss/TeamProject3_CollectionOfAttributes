@@ -338,7 +338,6 @@ namespace TeamPriject3_СollectionOfAttributes
         private void bedroom_label_Click(object sender, EventArgs e)
         {
             AddFurniture addFurniture = new AddFurniture(login, album_name, room_type);
-            MessageBox.Show(login + album_name + room_type);
             addFurniture.ShowDialog();
             ShowPhotos();
         }

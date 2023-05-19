@@ -146,9 +146,36 @@ namespace TeamPriject3_СollectionOfAttributes
             DataBase db = new DataBase();
             DataTable dataTable = new DataTable();
 
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `furniture` WHERE  room_type_name = @rtname AND category = @cat ", db.GetConnection());
-            command.Parameters.Add("@rtname", MySqlDbType.VarChar).Value = room_type;
-            command.Parameters.Add("@cat", MySqlDbType.VarChar).Value = category;
+            MySqlCommand command = new MySqlCommand();
+            if (combo_color.Text == "" && combo_style.Text == "")
+            {
+                command = new MySqlCommand("SELECT * FROM `furniture` WHERE  room_type_name = @rtname AND category = @cat ", db.GetConnection());
+                command.Parameters.Add("@rtname", MySqlDbType.VarChar).Value = room_type;
+                command.Parameters.Add("@cat", MySqlDbType.VarChar).Value = category;
+            } else if (combo_color.Text != "" && combo_style.Text == "")
+            {
+                command = new MySqlCommand("SELECT * FROM `furniture` WHERE  room_type_name = @rtname AND category = @cat AND color = @col ", db.GetConnection());
+                command.Parameters.Add("@rtname", MySqlDbType.VarChar).Value = room_type;
+                command.Parameters.Add("@cat", MySqlDbType.VarChar).Value = category;
+                command.Parameters.Add("@col", MySqlDbType.VarChar).Value = combo_color.Text;
+            }
+            else if (combo_color.Text == "" && combo_style.Text != "")
+            {
+                command = new MySqlCommand("SELECT * FROM `furniture` WHERE  room_type_name = @rtname AND category = @cat AND style = @col ", db.GetConnection());
+                command.Parameters.Add("@rtname", MySqlDbType.VarChar).Value = room_type;
+                command.Parameters.Add("@cat", MySqlDbType.VarChar).Value = category;
+                command.Parameters.Add("@col", MySqlDbType.VarChar).Value = combo_style.Text;
+            }
+            else
+            {
+                command = new MySqlCommand("SELECT * FROM `furniture` WHERE  room_type_name = @rtname AND category = @cat AND style = @styl AND color = @col", db.GetConnection());
+                command.Parameters.Add("@rtname", MySqlDbType.VarChar).Value = room_type;
+                command.Parameters.Add("@cat", MySqlDbType.VarChar).Value = category;
+                command.Parameters.Add("@col", MySqlDbType.VarChar).Value = combo_color.Text;
+                command.Parameters.Add("@styl", MySqlDbType.VarChar).Value = combo_style.Text;
+
+            }
+
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
@@ -241,6 +268,7 @@ namespace TeamPriject3_СollectionOfAttributes
                     pictureBox2.Image = Image.FromFile(listpath[str * 6 + 1]);
                     pictureBox2.Name = listId[str * 6 + 1];
                     pictureBox3.Image = Image.FromFile(listpath[str * 6 + 2]);
+                    pictureBox3.Name = listId[str * 6 + 2];
                     pictureBox4.Image = null;
                     pictureBox4.Name = null;
                     pictureBox5.Image = null;
@@ -350,7 +378,68 @@ namespace TeamPriject3_СollectionOfAttributes
 
 
 
-         
+        private void filter()
+        {
+            combo_color.Items.Clear();
+            combo_style.Items.Clear();
+            combo_style.Text= string.Empty;
+            combo_color.Text = string.Empty;
+            DataBase db = new DataBase();
+            DataTable dataTable = new DataTable();
+
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `furniture` WHERE  room_type_name = @rtname AND category = @cat ", db.GetConnection());
+            command.Parameters.Add("@rtname", MySqlDbType.VarChar).Value = room_type;
+            command.Parameters.Add("@cat", MySqlDbType.VarChar).Value = category;
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            adapter.SelectCommand = command;
+
+            adapter.Fill(dataTable);
+
+            db.OpenConnection();
+            DbDataReader reader = command.ExecuteReader();
+            List<string> listcolor = new List<string>();
+            List<string> list_color = new List<string>();
+            List<string> liststyle = new List<string>();
+            List<string> list_style = new List<string>();
+
+
+            while (reader.Read())
+            {
+                listcolor.Add(reader[6].ToString());
+                liststyle.Add(reader[7].ToString());
+            }
+            db.CloseConnection();
+
+            list_color = listcolor.Union(listcolor).ToList();
+            list_style = liststyle.Union(liststyle).ToList();
+
+            combo_color.Items.Add("");
+            combo_style.Items.Add("");
+            for (int i = 0; i< list_color.Count; i++)
+            {
+                if (list_color[i] != "")
+                {
+                    combo_color.Items.Add(list_color[i]);
+                }
+            }
+
+            for (int i = 0; i < list_style.Count; i++)
+            {
+                if (list_style[i] != "")
+                {
+                    combo_style.Items.Add(list_style[i]);
+                }
+            }
+
+
+
+
+
+        }
+
+
 
 
 
@@ -359,8 +448,10 @@ namespace TeamPriject3_СollectionOfAttributes
         {
             if (label_name1.Text != "")
             {
+
                 category = label_name1.Text;
                 ShowPhotos();
+                filter();
             }
         }
 
@@ -370,6 +461,7 @@ namespace TeamPriject3_СollectionOfAttributes
             {
                 category = label_name2.Text;
                 ShowPhotos();
+                filter();
             }
         }
 
@@ -379,6 +471,7 @@ namespace TeamPriject3_СollectionOfAttributes
             {
                 category = label_name3.Text;
                 ShowPhotos();
+                filter();
             }
         }
 
@@ -388,6 +481,7 @@ namespace TeamPriject3_СollectionOfAttributes
             {
                 category = label_name4.Text;
                 ShowPhotos();
+                filter();
             }
         }
 
@@ -397,6 +491,7 @@ namespace TeamPriject3_СollectionOfAttributes
             {
                 category = label_name5.Text;
                 ShowPhotos();
+                filter();
             }
         }
 
@@ -406,6 +501,7 @@ namespace TeamPriject3_СollectionOfAttributes
             {
                 category = label_name6.Text;
                 ShowPhotos();
+                filter();
             }
         }
 
@@ -488,6 +584,16 @@ namespace TeamPriject3_СollectionOfAttributes
         private void buttonEnter_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_search_Click(object sender, EventArgs e)
+        {
+            ShowPhotos();
         }
     }
 }
