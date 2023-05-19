@@ -141,7 +141,7 @@
             this.closing_panel.Controls.Add(this.Code);
             this.closing_panel.Controls.Add(this.label5);
             this.closing_panel.Location = new System.Drawing.Point(11, 11);
-            this.closing_panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.closing_panel.Margin = new System.Windows.Forms.Padding(2);
             this.closing_panel.Name = "closing_panel";
             this.closing_panel.Size = new System.Drawing.Size(483, 530);
             this.closing_panel.TabIndex = 8;

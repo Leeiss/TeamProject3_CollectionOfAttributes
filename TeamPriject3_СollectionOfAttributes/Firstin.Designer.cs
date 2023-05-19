@@ -98,6 +98,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            this.MinimizeBox = false;
             this.Name = "Firstin";
             this.Text = "Вход";
             this.ResumeLayout(false);
