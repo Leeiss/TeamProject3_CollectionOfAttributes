@@ -6,7 +6,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics.Tracing;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Security.Policy;
@@ -54,11 +56,10 @@ namespace TeamPriject3_СollectionOfAttributes
                 {
                     addressesList.Add(address);
                 }
+               
                 if (addressesList.Count > 0)
                 {
                     UpdateSaves(addresses);
-                    addressesList.RemoveRange(0, 5);
-
                 }
                 else
                 {
@@ -71,9 +72,7 @@ namespace TeamPriject3_СollectionOfAttributes
         {
             try
             {
-                panelClosing.Visible = true;
-
-                using (var client = new HttpClient())
+               using (var client = new HttpClient())
                 {
                     var response = await client.GetAsync(list[0]);
                     using (var stream = await response.Content.ReadAsStreamAsync())
@@ -161,7 +160,7 @@ namespace TeamPriject3_СollectionOfAttributes
                 {
                     return;
                 }
-                panelClosing.Visible = false;
+                
             }
             catch
             {
@@ -206,10 +205,26 @@ namespace TeamPriject3_СollectionOfAttributes
             showIdeaForm.ShowDialog();
         }
 
-        private void label_go_forward_Click(object sender, EventArgs e)
+       
+        private void label_go_forward_Click_1(object sender, EventArgs e)
         {
             try
             {
+                if (addressesList.Count > 6)
+                {
+                    addressesList.RemoveRange(0, 6);
+                }
+                else
+                {
+                    addressesList.Clear();
+                }
+
+                pictureBox1.Image = null;
+                pictureBox2.Image = null;
+                pictureBox3.Image = null;
+                pictureBox4.Image = null;
+                pictureBox5.Image = null;
+                pictureBox6.Image = null;
                 if (addressesList.Count == 0)
                 {
                     foreach (string address in addresses)
@@ -218,8 +233,9 @@ namespace TeamPriject3_СollectionOfAttributes
                     }
                 }
                 UpdateSaves(addressesList);
-                addressesList.RemoveRange(0, 5);
+                
             }
+
             catch
             {
                 MessageBox.Show("У вас пока нет сохраненных фото, вернитесь на главное чтобы их добавить");

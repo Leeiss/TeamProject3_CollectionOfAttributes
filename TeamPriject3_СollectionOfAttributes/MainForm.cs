@@ -229,5 +229,30 @@ namespace TeamPriject3_СollectionOfAttributes
             album_Look.ShowDialog();
             UpdateAlbums();
         }
+
+        private void showBtn_Click(object sender, EventArgs e)
+        {
+            using (MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=root;database=collectionofattributes"))
+            {
+                connection.Open();
+                using (MySqlCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = "SELECT COUNT(*) FROM ideas WHERE login=@login AND picturepath=@picturepath";
+                    command.Parameters.AddWithValue("@login", login);
+                    command.Parameters.AddWithValue("@picturepath", photoUrl);
+
+                    int count = Convert.ToInt32(command.ExecuteScalar());
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Вы уже добавляли это фото");
+                        return;
+                    }
+
+                    command.CommandText = "INSERT INTO ideas (login, picturepath) VALUES (@login, @picturepath)";
+                    int numRowsAffected = command.ExecuteNonQuery();
+                    MessageBox.Show("Пример оформления комнаты добавлен в ваши сохраненные");
+                }
+            }
+        }
     }
 }

@@ -29,20 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserIdeas));
-            this.label_go_forward = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panelClosing = new System.Windows.Forms.Panel();
-            this.label_login = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label_go_forward = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelClosing.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -50,15 +47,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label_go_forward
-            // 
-            this.label_go_forward.Location = new System.Drawing.Point(1393, 578);
-            this.label_go_forward.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_go_forward.Name = "label_go_forward";
-            this.label_go_forward.Size = new System.Drawing.Size(44, 46);
-            this.label_go_forward.TabIndex = 45;
-            this.label_go_forward.Click += new System.EventHandler(this.label_go_forward_Click);
             // 
             // pictureBox1
             // 
@@ -91,25 +79,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1777, 12);
             this.panel1.TabIndex = 50;
-            // 
-            // panelClosing
-            // 
-            this.panelClosing.Controls.Add(this.label_login);
-            this.panelClosing.Location = new System.Drawing.Point(0, 199);
-            this.panelClosing.Name = "panelClosing";
-            this.panelClosing.Size = new System.Drawing.Size(1473, 829);
-            this.panelClosing.TabIndex = 51;
-            // 
-            // label_login
-            // 
-            this.label_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_login.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label_login.Location = new System.Drawing.Point(627, 285);
-            this.label_login.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_login.Name = "label_login";
-            this.label_login.Size = new System.Drawing.Size(207, 42);
-            this.label_login.TabIndex = 52;
-            this.label_login.Text = "загрузка..";
             // 
             // pictureBox2
             // 
@@ -177,14 +146,25 @@
             this.pictureBox7.TabIndex = 58;
             this.pictureBox7.TabStop = false;
             // 
+            // label_go_forward
+            // 
+            this.label_go_forward.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_go_forward.Image = ((System.Drawing.Image)(resources.GetObject("label_go_forward.Image")));
+            this.label_go_forward.Location = new System.Drawing.Point(1414, 548);
+            this.label_go_forward.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_go_forward.Name = "label_go_forward";
+            this.label_go_forward.Size = new System.Drawing.Size(47, 41);
+            this.label_go_forward.TabIndex = 59;
+            this.label_go_forward.Click += new System.EventHandler(this.label_go_forward_Click_1);
+            // 
             // UserIdeas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1474, 1024);
+            this.Controls.Add(this.label_go_forward);
             this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.panelClosing);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox6);
@@ -192,13 +172,11 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label_go_forward);
             this.Controls.Add(this.pictureBox1);
             this.Name = "UserIdeas";
             this.Text = "Мои идеи";
             this.Load += new System.EventHandler(this.UserIdeas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelClosing.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -211,18 +189,15 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label_go_forward;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panelClosing;
-        private System.Windows.Forms.Label label_login;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label label_go_forward;
     }
 }
