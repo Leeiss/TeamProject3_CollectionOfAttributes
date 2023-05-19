@@ -142,6 +142,7 @@
             this.select_poster_btn.TabIndex = 75;
             this.select_poster_btn.Text = "Выбрать изображение";
             this.select_poster_btn.UseVisualStyleBackColor = false;
+            this.select_poster_btn.Click += new System.EventHandler(this.select_poster_btn_Click);
             // 
             // buttonEnter
             // 

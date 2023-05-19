@@ -15,6 +15,11 @@ namespace TeamPriject3_СollectionOfAttributes
 {
     public partial class Add_new_Furnitures : Form
     {
+
+
+        protected string path;
+
+
         public Add_new_Furnitures()
         {
             InitializeComponent();
@@ -42,11 +47,30 @@ namespace TeamPriject3_СollectionOfAttributes
 
         private void buttonEnter_Click(object sender, EventArgs e)
         {
-            MySqlCommand command = new MySqlCommand("INSERT INTO furniture (`room_type_name`, `category`, `link`, `color`, `style`) VALUES(@room_type_name, @category, @link, @admin_rights)", db.GetConnection());
-            command.Parameters.Add("@room_type_name", MySqlDbType.VarChar).Value = username;
-            command.Parameters.Add("@category", MySqlDbType.VarChar).Value = invented_password.Text;
-            command.Parameters.Add("@link", MySqlDbType.VarChar).Value = invented_email.Text;
-            command.Parameters.Add("@admin_rights", MySqlDbType.VarChar).Value = AdminRight;
+            DataBase db = new DataBase();
+            DataTable dataTable = new DataTable();
+
+            db.OpenConnection();
+            MySqlCommand command = new MySqlCommand("INSERT INTO furniture (`name` ,`room_type_name`, `category`, `link`,`path` , `color`, `style`) VALUES(@name, @room_type_name, @category, @link, @path, @color, @style)", db.GetConnection());
+            command.Parameters.Add("@room_type_name", MySqlDbType.VarChar).Value = comboBox1.Text;
+            command.Parameters.Add("@category", MySqlDbType.VarChar).Value = comboBox2.Text;
+            command.Parameters.Add("@link", MySqlDbType.VarChar).Value = entered_link.Text;
+            command.Parameters.Add("@color", MySqlDbType.VarChar).Value = textBox2.Text;
+            command.Parameters.Add("@style", MySqlDbType.VarChar).Value = textBox1.Text;
+            command.Parameters.Add("@name", MySqlDbType.VarChar).Value = "Добавленный";
+            command.Parameters.Add("@path", MySqlDbType.VarChar).Value = path;
+
+            if (command.ExecuteNonQuery() == 1)
+            {
+                MessageBox.Show("Предмет добавлен!");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Ошибка");
+            }
+
+
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -87,6 +111,16 @@ namespace TeamPriject3_СollectionOfAttributes
             }
 
 
+        }
+
+        private void select_poster_btn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG|All files (*.*)|*.*";
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+            {
+                path = fileDialog.FileName;
+            }
         }
     }
 }
