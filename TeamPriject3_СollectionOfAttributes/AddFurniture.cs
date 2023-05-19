@@ -177,15 +177,13 @@ namespace TeamPriject3_СollectionOfAttributes
 
 
             
-            if (str*6 > a)
+            if (str*6 >= a && a != 0)
             {
                 str --;
             }
 
             int c = a - str * 6;
 
-
-            int maxstr = a / 6;
 
 
 

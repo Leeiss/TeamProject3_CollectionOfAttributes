@@ -166,6 +166,7 @@
             this.label_addalbums.TabIndex = 18;
             this.label_addalbums.Text = "Создать новый";
             this.label_addalbums.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_addalbums.Click += new System.EventHandler(this.label_addalbums_Click);
             // 
             // label_box1
             // 
@@ -257,6 +258,7 @@
             this.label_show_allAlbums.TabIndex = 29;
             this.label_show_allAlbums.Text = "Смотреть все";
             this.label_show_allAlbums.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_show_allAlbums.Click += new System.EventHandler(this.label_show_allAlbums_Click);
             // 
             // pictureBox3
             // 

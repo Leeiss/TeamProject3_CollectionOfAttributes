@@ -41,6 +41,7 @@
             this.diningroom_label = new System.Windows.Forms.Label();
             this.laundry_label = new System.Windows.Forms.Label();
             this.cabinet_label = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.create_button = new System.Windows.Forms.Button();
             this.back_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -191,6 +192,15 @@
             this.cabinet_label.Text = "Кабинет";
             this.cabinet_label.Click += new System.EventHandler(this.cabinet_label_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(98)))));
+            this.panel2.Location = new System.Drawing.Point(-1, 61);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(601, 10);
+            this.panel2.TabIndex = 21;
+            // 
             // create_button
             // 
             this.create_button.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -256,6 +266,7 @@
         private System.Windows.Forms.Label diningroom_label;
         private System.Windows.Forms.Label laundry_label;
         private System.Windows.Forms.Label cabinet_label;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button create_button;
         private System.Windows.Forms.Button back_button;
     }

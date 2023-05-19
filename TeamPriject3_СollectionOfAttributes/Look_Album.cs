@@ -51,7 +51,6 @@ namespace TeamPriject3_СollectionOfAttributes
             List<string> listId_furnitures = new List<string>();
 
             List<string> listpath = new List<string>();
-            List<string> listlink = new List<string>();
 
 
 
@@ -92,7 +91,7 @@ namespace TeamPriject3_СollectionOfAttributes
 
 
 
-            if (str * 6 > a)
+            if (str * 6 >= a && a !=0)
             {
                 str--;
             }
@@ -307,7 +306,9 @@ namespace TeamPriject3_СollectionOfAttributes
         private void bedroom_label_Click(object sender, EventArgs e)
         {
             AddFurniture addFurniture = new AddFurniture(login, album_name, room_type);
+            MessageBox.Show(login + album_name + room_type);
             addFurniture.ShowDialog();
+            ShowPhotos();
         }
 
 
