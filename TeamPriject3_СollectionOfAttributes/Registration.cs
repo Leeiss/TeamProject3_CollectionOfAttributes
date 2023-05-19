@@ -103,6 +103,7 @@ namespace TeamPriject3_СollectionOfAttributes
                 if (!invented_login.Text.Equals("") && !invented_password.Text.Equals("") && !invented_email.Text.Equals(""))
                 {
                     username = invented_login.Text;
+
                     DataBase db = new DataBase();
                     db.OpenConnection();
                     MySqlCommand command1 = new MySqlCommand("SELECT * FROM users WHERE login = @Ul ", db.GetConnection()); // создаем объект и передаем команду для вытягивания из бд логина и пароля из бд

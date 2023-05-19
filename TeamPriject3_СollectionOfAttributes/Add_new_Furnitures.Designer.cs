@@ -55,6 +55,7 @@
             this.CreateNewAlbum_lable.Size = new System.Drawing.Size(534, 51);
             this.CreateNewAlbum_lable.TabIndex = 64;
             this.CreateNewAlbum_lable.Text = "Добавление предметов";
+            this.CreateNewAlbum_lable.Click += new System.EventHandler(this.CreateNewAlbum_lable_Click);
             // 
             // panel1
             // 
@@ -154,6 +155,7 @@
             this.buttonEnter.TabIndex = 76;
             this.buttonEnter.Text = "Добавить";
             this.buttonEnter.UseVisualStyleBackColor = false;
+            this.buttonEnter.Click += new System.EventHandler(this.buttonEnter_Click);
             // 
             // label4
             // 
@@ -170,6 +172,14 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Ванная комната",
+            "Кухня",
+            "Гостинная",
+            "Спальня",
+            "Столовая",
+            "Прачечная",
+            "Кабинет"});
             this.comboBox1.Location = new System.Drawing.Point(21, 148);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(209, 28);
@@ -194,6 +204,8 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(261, 28);
             this.comboBox2.TabIndex = 80;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.comboBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBox2_MouseClick);
             // 
             // Add_new_Furnitures
             // 
@@ -217,6 +229,7 @@
             this.MinimizeBox = false;
             this.Name = "Add_new_Furnitures";
             this.Text = "Add_new_Furnitures";
+            this.Load += new System.EventHandler(this.Add_new_Furnitures_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
