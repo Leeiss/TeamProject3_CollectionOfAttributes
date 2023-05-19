@@ -196,7 +196,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(98)))));
             this.panel2.Location = new System.Drawing.Point(-1, 61);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(601, 10);
             this.panel2.TabIndex = 21;
@@ -206,7 +206,7 @@
             this.create_button.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.create_button.BackColor = System.Drawing.Color.White;
             this.create_button.Image = ((System.Drawing.Image)(resources.GetObject("create_button.Image")));
-            this.create_button.Location = new System.Drawing.Point(495, 651);
+            this.create_button.Location = new System.Drawing.Point(495, 622);
             this.create_button.Name = "create_button";
             this.create_button.Size = new System.Drawing.Size(105, 43);
             this.create_button.TabIndex = 19;
@@ -218,7 +218,7 @@
             this.back_button.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.back_button.BackColor = System.Drawing.Color.White;
             this.back_button.Image = ((System.Drawing.Image)(resources.GetObject("back_button.Image")));
-            this.back_button.Location = new System.Drawing.Point(384, 651);
+            this.back_button.Location = new System.Drawing.Point(384, 622);
             this.back_button.Name = "back_button";
             this.back_button.Size = new System.Drawing.Size(105, 43);
             this.back_button.TabIndex = 20;
@@ -230,7 +230,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(612, 764);
+            this.ClientSize = new System.Drawing.Size(612, 706);
             this.Controls.Add(this.back_button);
             this.Controls.Add(this.create_button);
             this.Controls.Add(this.cabinet_label);

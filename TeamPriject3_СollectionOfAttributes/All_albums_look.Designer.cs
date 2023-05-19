@@ -49,7 +49,7 @@
             // label_go_back
             // 
             this.label_go_back.Image = ((System.Drawing.Image)(resources.GetObject("label_go_back.Image")));
-            this.label_go_back.Location = new System.Drawing.Point(-7, 328);
+            this.label_go_back.Location = new System.Drawing.Point(-12, 330);
             this.label_go_back.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_go_back.Name = "label_go_back";
             this.label_go_back.Size = new System.Drawing.Size(62, 60);
@@ -69,12 +69,12 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(122)))), ((int)(((byte)(121)))));
-            this.button1.Location = new System.Drawing.Point(309, 574);
+            this.button1.Location = new System.Drawing.Point(296, 581);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 56);
+            this.button1.Size = new System.Drawing.Size(123, 49);
             this.button1.TabIndex = 72;
             this.button1.Text = "Отмена";
             this.button1.UseVisualStyleBackColor = false;
@@ -83,12 +83,12 @@
             // buttonEnter
             // 
             this.buttonEnter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(98)))));
-            this.buttonEnter.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonEnter.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEnter.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonEnter.Location = new System.Drawing.Point(436, 574);
+            this.buttonEnter.Location = new System.Drawing.Point(423, 581);
             this.buttonEnter.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEnter.Name = "buttonEnter";
-            this.buttonEnter.Size = new System.Drawing.Size(126, 56);
+            this.buttonEnter.Size = new System.Drawing.Size(139, 49);
             this.buttonEnter.TabIndex = 71;
             this.buttonEnter.Text = "Добавить";
             this.buttonEnter.UseVisualStyleBackColor = false;
@@ -180,7 +180,7 @@
             // 
             // entered_login
             // 
-            this.entered_login.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.entered_login.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.entered_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(122)))), ((int)(((byte)(121)))));
             this.entered_login.Location = new System.Drawing.Point(19, 154);
             this.entered_login.Margin = new System.Windows.Forms.Padding(2);
@@ -195,12 +195,12 @@
             // album_call
             // 
             this.album_call.AutoSize = true;
-            this.album_call.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.album_call.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.album_call.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(122)))), ((int)(((byte)(121)))));
-            this.album_call.Location = new System.Drawing.Point(12, 104);
+            this.album_call.Location = new System.Drawing.Point(11, 92);
             this.album_call.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.album_call.Name = "album_call";
-            this.album_call.Size = new System.Drawing.Size(376, 37);
+            this.album_call.Size = new System.Drawing.Size(372, 45);
             this.album_call.TabIndex = 63;
             this.album_call.Text = "Всего альбомов: name";
             this.album_call.Click += new System.EventHandler(this.album_call_Click);
@@ -208,12 +208,12 @@
             // CreateNewAlbum_lable
             // 
             this.CreateNewAlbum_lable.AutoSize = true;
-            this.CreateNewAlbum_lable.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CreateNewAlbum_lable.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CreateNewAlbum_lable.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.CreateNewAlbum_lable.Location = new System.Drawing.Point(50, 27);
+            this.CreateNewAlbum_lable.Location = new System.Drawing.Point(33, 18);
             this.CreateNewAlbum_lable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CreateNewAlbum_lable.Name = "CreateNewAlbum_lable";
-            this.CreateNewAlbum_lable.Size = new System.Drawing.Size(499, 51);
+            this.CreateNewAlbum_lable.Size = new System.Drawing.Size(504, 60);
             this.CreateNewAlbum_lable.TabIndex = 62;
             this.CreateNewAlbum_lable.Text = "Альбомы ваших идей";
             this.CreateNewAlbum_lable.Click += new System.EventHandler(this.CreateNewAlbum_lable_Click);
@@ -221,10 +221,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(98)))));
-            this.panel1.Location = new System.Drawing.Point(19, 80);
+            this.panel1.Location = new System.Drawing.Point(-8, 80);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(543, 10);
+            this.panel1.Size = new System.Drawing.Size(584, 10);
             this.panel1.TabIndex = 61;
             // 
             // button2
@@ -236,7 +236,7 @@
             this.button2.Location = new System.Drawing.Point(497, 154);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(52, 55);
+            this.button2.Size = new System.Drawing.Size(40, 44);
             this.button2.TabIndex = 75;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -262,6 +262,7 @@
             this.Controls.Add(this.CreateNewAlbum_lable);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimizeBox = false;
             this.Name = "All_albums_look";
             this.Text = "Album_look";
             this.Load += new System.EventHandler(this.Album_look_Load);
