@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,8 @@ namespace TeamPriject3_СollectionOfAttributes
 {
     public partial class ShowIdeaForm : Form
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+
         public ShowIdeaForm(string url)
         {
             InitializeComponent();

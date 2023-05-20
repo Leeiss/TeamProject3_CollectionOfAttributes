@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace TeamPriject3_СollectionOfAttributes
         private string login;
         private string password;
         private string mail;
+        private static Logger logger = LogManager.GetCurrentClassLogger();
 
 
         public Профиль()
@@ -107,8 +109,10 @@ namespace TeamPriject3_СollectionOfAttributes
             {
                 Add_new_Furnitures add_New_Furnitures = new Add_new_Furnitures();
                 add_New_Furnitures.ShowDialog();
+                logger.Info("успешно перешли в добавление предметов интерьера!");
 
-            }else
+            }
+            else
             {
                 MessageBox.Show("Вы не администратор!");
             }

@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using Newtonsoft.Json.Linq;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -19,7 +20,7 @@ namespace TeamPriject3_СollectionOfAttributes
         protected string login;
         private const string PexelsApiUrl = "https://api.pexels.com/v1/search?query=interior";
         private const string PexelsApiKey = "3GOrWfrocQkomEscjWMcQl2evbNvUjpesFSoQ51PljIdV3ob0PrKGJ8g";
-
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         private string photoUrl;
         private Random _random;
         private HttpClient _httpClient;
@@ -158,11 +159,14 @@ namespace TeamPriject3_СollectionOfAttributes
             CreateNewAlbum createNewAlbum = new CreateNewAlbum(login);
             createNewAlbum.ShowDialog();
             UpdateAlbums();
+            logger.Info("успешно создали новый альбом");
+
         }
 
         private void label_go_forward_Click(object sender, EventArgs e)
         {
             GetPhotoWithAPI();
+            logger.Info("перелеснули страницу");
         }
 
         private void label_name1_Click(object sender, EventArgs e)
@@ -172,6 +176,7 @@ namespace TeamPriject3_СollectionOfAttributes
                 Look_Album look_Album = new Look_Album(label_name1.Text, login);
                 look_Album.ShowDialog();
                 UpdateAlbums();
+                logger.Info("успешно перешли в просмотр альбома!");
             }
             
 
@@ -185,6 +190,7 @@ namespace TeamPriject3_СollectionOfAttributes
                 Look_Album look_Album = new Look_Album(label_name2.Text, login);
                 look_Album.ShowDialog();
                 UpdateAlbums();
+                logger.Info("успешно перешли в просмотр альбома!");
             }
         }
 
@@ -195,6 +201,7 @@ namespace TeamPriject3_СollectionOfAttributes
                 Look_Album look_Album = new Look_Album(label_name3.Text, login);
                 look_Album.ShowDialog();
                 UpdateAlbums();
+                logger.Info("успешно перешли в просмотр альбома!");
             }
         }
 
@@ -205,6 +212,7 @@ namespace TeamPriject3_СollectionOfAttributes
                 Look_Album look_Album = new Look_Album(label_name4.Text, login);
                 look_Album.ShowDialog();
                 UpdateAlbums();
+                logger.Info("успешно перешли в просмотр альбома!");
             }
         }
 
@@ -251,14 +259,17 @@ namespace TeamPriject3_СollectionOfAttributes
                         command.CommandText = "INSERT INTO ideas (login, picturepath) VALUES (@login, @picturepath)";
                         int numRowsAffected = command.ExecuteNonQuery();
                         MessageBox.Show("Пример оформления комнаты добавлен в ваши сохраненные");
+                        logger.Info("успешно добавлен пример в альбом");
                     }
                     catch
                     {
                         MessageBox.Show("Подключите впн");
+                        logger.Error("не смог добавить пример в альбом");
 
                     }
                 }
             }
+
         }
 
         private void label_showprofile_Click(object sender, EventArgs e)
@@ -266,6 +277,8 @@ namespace TeamPriject3_СollectionOfAttributes
             Профиль profile = new Профиль(login);
             profile.ShowDialog();
             UpdateAlbums();
+            MessageBox.Show("переход в профиль");
+
         }
 
         private void label_box1_Click(object sender, EventArgs e)

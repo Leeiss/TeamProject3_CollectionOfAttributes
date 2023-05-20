@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +21,7 @@ namespace TeamPriject3_СollectionOfAttributes
         protected string name_album;
         protected string room_type;
         protected string category;
-
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         private int str = 0;
         protected int call_photos = 0;
         
@@ -584,6 +585,8 @@ namespace TeamPriject3_СollectionOfAttributes
         private void buttonEnter_Click(object sender, EventArgs e)
         {
             Close();
+            logger.Info("успешно завершилось редактирование");
+
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)

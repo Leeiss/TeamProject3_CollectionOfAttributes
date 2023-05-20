@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,7 @@ namespace TeamPriject3_СollectionOfAttributes
         protected string login;
         protected int str = 0;
         protected int call_album;
+        private static Logger logger = LogManager.GetCurrentClassLogger();
 
         public All_albums_look()
         {
@@ -53,12 +55,16 @@ namespace TeamPriject3_СollectionOfAttributes
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+            logger.Info("успешно вернулись назад");
+
         }
 
         private void buttonEnter_Click(object sender, EventArgs e)
         {
             CreateNewAlbum createNewAlbum = new CreateNewAlbum(login);
             createNewAlbum.ShowDialog();
+            logger.Info("успешно перешли в добавления");
+
         }
 
         private void Album_look_Load(object sender, EventArgs e)
@@ -327,6 +333,7 @@ namespace TeamPriject3_СollectionOfAttributes
         private void button2_Click(object sender, EventArgs e)
         {
             ShowNames();
+            logger.Info("был совершен поиск");
         }
 
 

@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,8 @@ namespace TeamPriject3_СollectionOfAttributes
         protected string room_type;
         protected int str = 0;
         protected bool delete_mod = false;
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+
 
         public Look_Album(string Album_name, string Login)
         {
@@ -256,6 +259,7 @@ namespace TeamPriject3_СollectionOfAttributes
             MessageBox.Show("Предмет удален");
             db.CloseConnection();
             ShowPhotos();
+            logger.Info("удаление предмета");
 
 
 
@@ -454,11 +458,15 @@ namespace TeamPriject3_СollectionOfAttributes
             {
                 label1.Text = "Прекратить удаление";
                 delete_mod= true;
+                logger.Info("режим удаления предметов");
+
             }
             else
             {
                 label1.Text = "- Удалить предметы";
                 delete_mod= false;
+                logger.Info("переход в режим просмотра вещей");
+
             }
         }
 

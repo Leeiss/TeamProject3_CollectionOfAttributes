@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using MySqlX.XDevAPI;
+using NLog;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -24,6 +25,8 @@ namespace TeamPriject3_СollectionOfAttributes
         List<string> addresses = new List<string>();
         List<string> addressesList = new List<string>();
         private string connectionString = "server=localhost;port=3306;username=root;password=root;database=collectionofattributes";
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+
         public UserIdeas(string login)
         {
             InitializeComponent();

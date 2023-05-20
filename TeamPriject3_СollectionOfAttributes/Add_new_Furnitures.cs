@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,7 @@ namespace TeamPriject3_СollectionOfAttributes
 
         protected string path;
 
+        private static Logger logger = LogManager.GetCurrentClassLogger();
 
         public Add_new_Furnitures()
         {
@@ -64,6 +66,8 @@ namespace TeamPriject3_СollectionOfAttributes
             {
                 MessageBox.Show("Предмет добавлен!");
                 this.Close();
+                logger.Info("предмет был успешно добавлен");
+
             }
             else
             {

@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,7 @@ namespace TeamPriject3_СollectionOfAttributes
     {
         private string password;
         private string username;
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         private int AdminRight;
        
         public Registration()

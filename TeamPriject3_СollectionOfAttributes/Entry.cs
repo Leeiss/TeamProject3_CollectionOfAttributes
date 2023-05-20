@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NLog;
 
 namespace TeamPriject3_СollectionOfAttributes
 {
     public partial class Entry : Form
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+
         public Entry()
         {
             InitializeComponent();
@@ -49,6 +52,7 @@ namespace TeamPriject3_СollectionOfAttributes
                 MainForm mainForm = new MainForm(loginUser);
                 mainForm.ShowDialog();
                 this.Close();
+                logger.Info("успешно перешли в просмотр альбома!");
 
 
             }

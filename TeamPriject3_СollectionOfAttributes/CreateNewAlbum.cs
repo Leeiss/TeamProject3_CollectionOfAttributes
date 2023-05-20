@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +16,7 @@ namespace TeamPriject3_СollectionOfAttributes
     public partial class CreateNewAlbum : Form
     {
 
-
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         protected string room_type;
         protected string login;
         private string connectionString = "server=localhost;port=3306;username=root;password=root;database=collectionofattributes";

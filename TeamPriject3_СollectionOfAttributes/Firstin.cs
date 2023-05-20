@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace TeamPriject3_СollectionOfAttributes
 {
     public partial class Firstin : Form
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+
         public Firstin()
         {
             InitializeComponent();
@@ -21,6 +24,7 @@ namespace TeamPriject3_СollectionOfAttributes
         {
             Registration userRegist = new Registration();
             userRegist.Show();
+            logger.Info("успешно перешли в регистрацию");
 
         }
 
@@ -29,6 +33,7 @@ namespace TeamPriject3_СollectionOfAttributes
         {
             Entry userLogin = new Entry();
             userLogin.Show();
+            logger.Info("успешно перешли ко входу");
 
         }
 

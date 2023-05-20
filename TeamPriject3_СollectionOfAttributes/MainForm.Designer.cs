@@ -415,6 +415,7 @@
             this.Controls.Add(this.pictureBox_logo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "CREATIVE INTERIOR";
