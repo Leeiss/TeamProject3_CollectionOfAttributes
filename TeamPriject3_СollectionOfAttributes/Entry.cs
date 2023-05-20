@@ -21,7 +21,7 @@ namespace TeamPriject3_СollectionOfAttributes
             InitializeComponent();
         }
 
-        private void buttonEnter_Click(object sender, EventArgs e)
+        public void buttonEnter_Click(object sender, EventArgs e)
         {
             String loginUser = entered_login.Text;
             String passUser = entered_password.Text;

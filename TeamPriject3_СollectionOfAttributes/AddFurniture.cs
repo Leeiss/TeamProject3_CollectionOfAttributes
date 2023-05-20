@@ -17,7 +17,7 @@ namespace TeamPriject3_СollectionOfAttributes
     public partial class AddFurniture : Form
     {
 
-        protected string login;
+        public string login;
         protected string name_album;
         protected string room_type;
         protected string category;

@@ -17,7 +17,7 @@ namespace TeamPriject3_СollectionOfAttributes
 {
     public partial class MainForm : Form
     {
-        protected string login;
+        public string login;
         private const string PexelsApiUrl = "https://api.pexels.com/v1/search?query=interior";
         private const string PexelsApiKey = "3GOrWfrocQkomEscjWMcQl2evbNvUjpesFSoQ51PljIdV3ob0PrKGJ8g";
         private static Logger logger = LogManager.GetCurrentClassLogger();

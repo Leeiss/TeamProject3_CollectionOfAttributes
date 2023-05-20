@@ -17,9 +17,9 @@ namespace TeamPriject3_СollectionOfAttributes
     {
 
         private static Logger logger = LogManager.GetCurrentClassLogger();
-        protected string room_type;
-        protected string login;
-        private string connectionString = "server=localhost;port=3306;username=root;password=root;database=collectionofattributes";
+        public string room_type;
+        public string login;
+        public string connectionString = "server=localhost;port=3306;username=root;password=root;database=collectionofattributes";
 
         public CreateNewAlbum()
         {
@@ -39,7 +39,7 @@ namespace TeamPriject3_СollectionOfAttributes
             this.Close();
         }
 
-        private void create_button_Click(object sender, EventArgs e)
+        public void create_button_Click(object sender, EventArgs e)
         {
             if (namealbum_textbox.Text != "")
             {

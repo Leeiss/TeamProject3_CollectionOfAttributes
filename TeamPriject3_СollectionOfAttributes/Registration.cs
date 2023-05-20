@@ -31,7 +31,7 @@ namespace TeamPriject3_СollectionOfAttributes
         }
 
        
-        private void button_Registr_Click(object sender, EventArgs e)
+        public void button_Registr_Click(object sender, EventArgs e)
         {
            
             if (!invented_login.Text.Equals("") && !invented_email.Text.Equals("") && !invented_password.Text.Equals(""))
